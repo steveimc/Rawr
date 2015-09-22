@@ -46,13 +46,26 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Hero\AnimationController.cs" />
      <Compile Include="Assets\Scripts\Hero\HeroBaseController.cs" />
      <Compile Include="Assets\Scripts\Hero\HeroControllerNoSword.cs" />
      <Compile Include="Assets\Scripts\Hero\HeroControllerSword.cs" />
      <Compile Include="Assets\Scripts\Hero\HeroStatus.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\HUD Elements\UIFilledBar.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\HUD Elements\UIPlayer.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\HUDController.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\Screens\MenuButton.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\Screens\MenuOnline.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\Screens\MenuTip.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\Screens\MenusController.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\Screens\ModePanel.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\Screens\TitlePanel.cs" />
+     <Compile Include="Assets\Scripts\Hero\User Interface\Screens\UINetworkManager.cs" />
      <Compile Include="Assets\Scripts\InputBank.cs" />
+     <Compile Include="Assets\Scripts\Network\PlayerSyncInput.cs" />
+     <Compile Include="Assets\Scripts\Network\PlayerSyncPosition.cs" />
      <Compile Include="Assets\Scripts\UserControls.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
