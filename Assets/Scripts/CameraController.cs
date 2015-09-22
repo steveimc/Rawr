@@ -13,10 +13,19 @@ public class CameraController : MonoBehaviour
 	private Vector3 m_LastTargetPosition;
 	private Vector3 m_CurrentVelocity;
 	private Vector3 m_LookAheadPos;
-	
+
+	/*
 	// Use this for initialization
 	private void Start()
 	{
+		m_LastTargetPosition = target.position;
+		m_OffsetZ = (transform.position - target.position).z;
+		transform.parent = null;
+	}*/
+
+	public void Init(Transform playerTarget)
+	{
+		target = playerTarget;
 		m_LastTargetPosition = target.position;
 		m_OffsetZ = (transform.position - target.position).z;
 		transform.parent = null;
@@ -25,6 +34,9 @@ public class CameraController : MonoBehaviour
 	// Update is called once per frame
 	private void Update()
 	{
+		if( target == null)
+			return;
+
 		// only update lookahead pos if accelerating or changed direction
 		float xMoveDelta = (target.position - m_LastTargetPosition).x;
 		

@@ -3,6 +3,11 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour 
 {
+	[SerializeField] GameObject spawnPoint;
+	[SerializeField] GameObject playerPrefab;
+
+	private int playerCount = 0;
+
 	public enum HeroId
 	{
 		NONE,
@@ -24,6 +29,28 @@ public class GameManager : MonoBehaviour
 		id = HeroId.NONE;
 		Instance = this;
 		DontDestroyOnLoad(gameObject);
+	}
+
+	private void Start()
+	{
+		if(Game.Instance.IsLocalGame)
+		{
+			InstantiatePlayers();
+		}
+	}
+
+	private void InstantiatePlayers()
+	{
+		Instantiate(playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+		// If its 2Players Local spawn second player
+		if(Game.Instance.GameMode == GameMode.Local)
+			Instantiate(playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+	}
+
+	public int PlayerJoined()
+	{
+		playerCount ++;
+		return playerCount;
 	}
 
 	public int AssignPlayerId(string sPlayerName = "")
@@ -49,8 +76,15 @@ public class GameManager : MonoBehaviour
 					id = HeroId.PLAYER2;
 					return (int)id;
 				}
-
 		}
+	}
 
+	void OnLevelWasLoaded(int level) 
+	{
+		if(level == 0)
+		{
+			Instance = null;
+			Destroy(this.gameObject);
+		}
 	}
 }
