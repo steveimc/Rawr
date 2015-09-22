@@ -27,6 +27,8 @@ public class HeroStatus : MonoBehaviour
 			if(Game.Instance.IsLocalGame)
 			{
 				GetComponent<PlayerSyncPosition>().enabled = false;
+				if (m_iHeroId ==1)
+					FindObjectOfType<CameraController>().Init(this.transform);
 			}
 		}
 
