@@ -1,0 +1,2887 @@
+fileFormatVersion: 2
+guid: 93b40d4b2d0be4ca9ab227afe566df43
+timeCreated: 1442819048
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: back
+    100002: Body
+    100004: bottom
+    100006: Cape
+    100008: Cape_Handle1
+    100010: FaceHandle
+    100012: Head
+    100014: //RootNode
+    100016: Hip_Handle
+    100018: ikHandle10
+    100020: ikHandle13
+    100022: ikHandle14
+    100024: ikHandle15
+    100026: ikHandle16
+    100028: ikHandle5
+    100030: ikHandle5 1
+    100032: ikHandle5 2
+    100034: ikHandle5 3
+    100036: ikHandle5 4
+    100038: ikHandle5 5
+    100040: ikHandle5 6
+    100042: ikHandle6
+    100044: ikHandle6 1
+    100046: ikHandle7
+    100048: ikHandle7 1
+    100050: ikHandle9
+    100052: joint10
+    100054: joint11
+    100056: joint14
+    100058: joint15
+    100060: joint16
+    100062: joint38
+    100064: joint39
+    100066: joint40
+    100068: joint41
+    100070: joint42
+    100072: joint43
+    100074: joint44
+    100076: joint45
+    100078: joint46
+    100080: joint47
+    100082: joint48
+    100084: joint49
+    100086: joint50
+    100088: joint51
+    100090: joint52
+    100092: joint53
+    100094: joint54
+    100096: joint55
+    100098: joint56
+    100100: joint57
+    100102: joint58
+    100104: joint59
+    100106: joint6
+    100108: joint60
+    100110: joint61
+    100112: joint62
+    100114: joint63
+    100116: joint64
+    100118: joint65
+    100120: joint66
+    100122: joint67
+    100124: joint68
+    100126: joint69
+    100128: joint70
+    100130: joint71
+    100132: joint72
+    100134: joint73
+    100136: joint74
+    100138: joint75
+    100140: joint76
+    100142: joint77
+    100144: joint78
+    100146: joint79
+    100148: joint80
+    100150: joint81
+    100152: joint82
+    100154: joint83
+    100156: joint84
+    100158: joint85
+    100160: joint86
+    100162: joint87
+    100164: joint88
+    100166: joint89
+    100168: joint9
+    100170: joint90
+    100172: joint91
+    100174: joint92
+    100176: joint93
+    100178: joint94
+    100180: joint95
+    100182: joint96
+    100184: LArm_Handle
+    100186: left
+    100188: LeftWing
+    100190: LElbow
+    100192: LElbow1
+    100194: LElbow_Handle
+    100196: LFeet_Handle
+    100198: LHand_Handle
+    100200: LHip
+    100202: LKnee
+    100204: LKnee_Handle
+    100206: LLeg_Handle
+    100208: LShoulder
+    100210: LShoulder1
+    100212: LWing_Handle
+    100214: LWrist_Handle
+    100216: Neck
+    100218: RArm_Handle
+    100220: RElbow_Handle
+    100222: RFeet_Handle
+    100224: RHand_Handle
+    100226: RHip
+    100228: RightWing
+    100230: RKnee
+    100232: RKnee_Handle
+    100234: RLeg_Handle
+    100236: Root
+    100238: Root_Handle
+    100240: RWing_Handle
+    100242: RWrist_Handle
+    100244: Spine1
+    100246: Spine2
+    100248: Spine2_Handle
+    100250: Spine3
+    100252: Spine3_Handle
+    100254: World_Handle
+    400000: back
+    400002: Body
+    400004: bottom
+    400006: Cape
+    400008: Cape_Handle1
+    400010: FaceHandle
+    400012: Head
+    400014: //RootNode
+    400016: Hip_Handle
+    400018: ikHandle10
+    400020: ikHandle13
+    400022: ikHandle14
+    400024: ikHandle15
+    400026: ikHandle16
+    400028: ikHandle5
+    400030: ikHandle5 1
+    400032: ikHandle5 2
+    400034: ikHandle5 3
+    400036: ikHandle5 4
+    400038: ikHandle5 5
+    400040: ikHandle5 6
+    400042: ikHandle6
+    400044: ikHandle6 1
+    400046: ikHandle7
+    400048: ikHandle7 1
+    400050: ikHandle9
+    400052: joint10
+    400054: joint11
+    400056: joint14
+    400058: joint15
+    400060: joint16
+    400062: joint38
+    400064: joint39
+    400066: joint40
+    400068: joint41
+    400070: joint42
+    400072: joint43
+    400074: joint44
+    400076: joint45
+    400078: joint46
+    400080: joint47
+    400082: joint48
+    400084: joint49
+    400086: joint50
+    400088: joint51
+    400090: joint52
+    400092: joint53
+    400094: joint54
+    400096: joint55
+    400098: joint56
+    400100: joint57
+    400102: joint58
+    400104: joint59
+    400106: joint6
+    400108: joint60
+    400110: joint61
+    400112: joint62
+    400114: joint63
+    400116: joint64
+    400118: joint65
+    400120: joint66
+    400122: joint67
+    400124: joint68
+    400126: joint69
+    400128: joint70
+    400130: joint71
+    400132: joint72
+    400134: joint73
+    400136: joint74
+    400138: joint75
+    400140: joint76
+    400142: joint77
+    400144: joint78
+    400146: joint79
+    400148: joint80
+    400150: joint81
+    400152: joint82
+    400154: joint83
+    400156: joint84
+    400158: joint85
+    400160: joint86
+    400162: joint87
+    400164: joint88
+    400166: joint89
+    400168: joint9
+    400170: joint90
+    400172: joint91
+    400174: joint92
+    400176: joint93
+    400178: joint94
+    400180: joint95
+    400182: joint96
+    400184: LArm_Handle
+    400186: left
+    400188: LeftWing
+    400190: LElbow
+    400192: LElbow1
+    400194: LElbow_Handle
+    400196: LFeet_Handle
+    400198: LHand_Handle
+    400200: LHip
+    400202: LKnee
+    400204: LKnee_Handle
+    400206: LLeg_Handle
+    400208: LShoulder
+    400210: LShoulder1
+    400212: LWing_Handle
+    400214: LWrist_Handle
+    400216: Neck
+    400218: RArm_Handle
+    400220: RElbow_Handle
+    400222: RFeet_Handle
+    400224: RHand_Handle
+    400226: RHip
+    400228: RightWing
+    400230: RKnee
+    400232: RKnee_Handle
+    400234: RLeg_Handle
+    400236: Root
+    400238: Root_Handle
+    400240: RWing_Handle
+    400242: RWrist_Handle
+    400244: Spine1
+    400246: Spine2
+    400248: Spine2_Handle
+    400250: Spine3
+    400252: Spine3_Handle
+    400254: World_Handle
+    2300000: Head
+    3300000: Head
+    4300000: Head
+    4300002: LeftWing
+    4300004: RightWing
+    4300006: Cape
+    4300008: Body
+    7400000: Idle
+    7400002: Run
+    7400004: Jump
+    7400006: Dash
+    7400008: Crouch
+    7400010: Fall
+    7400012: Wall
+    7400014: WallJump
+    7400016: Attack
+    9500000: //RootNode
+    13700000: Body
+    13700002: Cape
+    13700004: LeftWing
+    13700006: RightWing
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 2
+    animationPositionError: 2
+    animationScaleError: 2
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 73
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 134
+      lastFrame: 149
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dash
+      takeName: Take 001
+      firstFrame: 75
+      lastFrame: 85
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch
+      takeName: Take 001
+      firstFrame: 164
+      lastFrame: 165
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fall
+      takeName: Take 001
+      firstFrame: 150
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Wall
+      takeName: Take 001
+      firstFrame: 200
+      lastFrame: 224
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: WallJump
+      takeName: Take 001
+      firstFrame: 225
+      lastFrame: 234
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 248
+      lastFrame: 260
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: ikHandle9
+        weight: 1
+      - path: ikHandle10
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LeftWing
+        weight: 1
+      - path: RightWing
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LHip
+        weight: 1
+      - path: Root/LHip/LKnee
+        weight: 1
+      - path: Root/LHip/LKnee/joint14
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15
+        weight: 1
+      - path: Root/LHip/LKnee/joint14/joint15/joint16
+        weight: 1
+      - path: Root/RHip
+        weight: 1
+      - path: Root/RHip/RKnee
+        weight: 1
+      - path: Root/RHip/RKnee/joint9
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10
+        weight: 1
+      - path: Root/RHip/RKnee/joint9/joint10/joint11
+        weight: 1
+      - path: Root/Spine1
+        weight: 1
+      - path: Root/Spine1/Spine2
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/joint71/joint72/joint73/joint74/joint75/joint76/joint77/joint78/joint79
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint43/joint44/joint45/joint46
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint47/joint48/joint49/joint50
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder/LElbow/joint38/joint39/joint51/joint52/joint53/joint54
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint82/joint83/joint84
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint85/joint86/joint87/joint88
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint89/joint90/joint91/joint92
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/LShoulder1/LElbow1/joint80/joint81/joint93/joint94/joint95/joint96
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/Head
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle13
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/Cape_Handle1/ikHandle14
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint55/joint56/joint57/joint58/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/joint63/joint64/joint65/joint66/joint67/joint68/joint69/joint70
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/LWing_Handle/ikHandle5 6
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle
+        weight: 1
+      - path: Root/Spine1/Spine2/Spine3/Neck/joint6/RWing_Handle/ikHandle6 1
+        weight: 1
+      - path: World_Handle
+        weight: 1
+      - path: World_Handle/LHand_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle
+        weight: 1
+      - path: World_Handle/LLeg_Handle/LFeet_Handle/ikHandle5
+        weight: 1
+      - path: World_Handle/RHand_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle
+        weight: 1
+      - path: World_Handle/RLeg_Handle/RFeet_Handle/ikHandle5 1
+        weight: 1
+      - path: World_Handle/Root_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/Hip_Handle/Spine2_Handle/Spine3_Handle/FaceHandle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/ikHandle15
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LArm_Handle/LWrist_Handle/ikHandle7
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LElbow_Handle/ikHandle5 2
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/LKnee_Handle/ikHandle5 3
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/ikHandle16
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RArm_Handle/RWrist_Handle/ikHandle7 1
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RElbow_Handle/ikHandle5 4
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle
+        weight: 1
+      - path: World_Handle/Root_Handle/RKnee_Handle/ikHandle5 5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 60
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: Root
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: d86b24c38b3d7474aa448df2c6087cd0,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
