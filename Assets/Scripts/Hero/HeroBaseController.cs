@@ -22,6 +22,8 @@ public abstract class HeroBaseController : MonoBehaviour
 	[SerializeField] protected float m_ProjectileForce;
 	[SerializeField] protected float m_DashDistance;
 
+	[SerializeField] protected BoxCollider2D m_UpperCollider;
+
 	protected float m_timer;
 	protected float m_comboTimer;
 	protected float m_chargeTimer;
@@ -43,7 +45,7 @@ public abstract class HeroBaseController : MonoBehaviour
 		LEFT
 	}
 
-	protected const float CIRCLE_DIAMETER 	= 1.0f;
+	protected const float CIRCLE_DIAMETER 	= 2.0f;
 	protected const float RAY_DISTANCE 		= 1.0f;
 
 	public void Awake()
@@ -105,9 +107,15 @@ public abstract class HeroBaseController : MonoBehaviour
 		animator.Crouch(fVertical);
 
 		if(fVertical < -0.1)
+		{
 			m_isCrouching = true;
+			m_UpperCollider.enabled = false;
+		}
 		else
+		{
 			m_isCrouching = false;
+			m_UpperCollider.enabled = true;
+		}
 
 	}
 

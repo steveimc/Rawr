@@ -100,7 +100,7 @@ public class HeroControllerNoSword : HeroBaseController
 			}
 			else
 			{
-				m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x * 0.9f,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
+				m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x * 0.7f,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
 			}
 
 		}
@@ -115,6 +115,7 @@ public class HeroControllerNoSword : HeroBaseController
 		}
 		else if(m_distance >= m_DashDistance)
 		{
+			m_UpperCollider.enabled = true;
 			m_isDashing = false;
 			m_HeroRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
 			m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x * 0.2f,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
@@ -198,6 +199,9 @@ public class HeroControllerNoSword : HeroBaseController
 			m_HeroRigidBody.AddForce(new Vector2(-m_DashForce,0f));
 
 		if(!m_isSpinning)
+		{
 			animator.Dash();
+			m_UpperCollider.enabled = false;
+		}
 	}
 }

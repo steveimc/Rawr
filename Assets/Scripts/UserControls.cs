@@ -38,7 +38,7 @@ public class UserControls : MonoBehaviour
 				m_bCharge = Input.GetButtonDown(InputBank.ATTACK+m_Hero.m_iHeroId);
 			}
 
-			if(Input.GetKeyDown(KeyCode.P))
+			if(Input.GetButtonDown(InputBank.SWORD+m_Hero.m_iHeroId))
 			{
 				m_Hero.m_bHasSword = !m_Hero.m_bHasSword;
 				ChangeHeroController();
