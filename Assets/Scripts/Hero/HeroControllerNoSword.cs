@@ -7,8 +7,8 @@ public class HeroControllerNoSword : HeroBaseController
 
 	internal override void Move(float fHorizontal, float fVertical, bool bJump, bool bDash)
 	{
-
-		CheckDirection(fHorizontal);
+		m_Facing = m_animator.CheckDirection();
+		Flip(this.transform);
 		
 		m_comboTimer += Time.fixedDeltaTime;
 
@@ -20,12 +20,12 @@ public class HeroControllerNoSword : HeroBaseController
 
 		if(!IsGrounded() && !m_isFalling && !m_isOnWall)
 		{
-			animator.Fall();
+			m_animator.Fall();
 			m_isFalling = true;
 		}
 		else if(IsGrounded())
 		{
-			animator.IsGrounded();
+			m_animator.IsGrounded();
 			m_isFalling = false;
 			m_isOnWall = false;
 		}
@@ -45,7 +45,7 @@ public class HeroControllerNoSword : HeroBaseController
 			if(!m_isOnWall)
 			{
 				m_isOnWall = true;
-				animator.Wall();
+				m_animator.Wall();
 			}
 
 			m_timer += Time.fixedDeltaTime;
@@ -145,7 +145,7 @@ public class HeroControllerNoSword : HeroBaseController
 
 	internal override void Jump()
 	{
-		animator.Jump();
+		m_animator.Jump();
 
 		m_timer = 0;
 		m_canWallJump = true;
@@ -158,35 +158,8 @@ public class HeroControllerNoSword : HeroBaseController
 			return;
 
 		if(IsGrounded() && !m_isDashing)
-			animator.Attack(m_AttackType);
+			m_animator.Attack(m_AttackType);
 
-	}
-
-	internal override void CheckDirection(float fInput)
-	{
-		if(fInput < -0.2f)
-		{
-			m_Facing = Direction.LEFT;
-			Flip (this.transform);
-		}
-		else if(fInput > 0.2f)
-		{
-			m_Facing = Direction.RIGHT;
-			Flip (this.transform);
-		}
-	}
-
-	internal override void Flip(Transform objectToFlip)
-	{
-		if(m_isCharging || m_isCrouching)
-			return;
-		
-		float fScale = objectToFlip.localScale.y;
-
-		if(m_Facing == Direction.RIGHT)
-			objectToFlip.localScale = new Vector3(fScale,fScale,fScale);
-		else
-			objectToFlip.localScale = new Vector3(-fScale,fScale,fScale);
 	}
 
 	internal override void Dash()
@@ -200,7 +173,7 @@ public class HeroControllerNoSword : HeroBaseController
 
 		if(!m_isSpinning)
 		{
-			animator.Dash();
+			m_animator.Dash();
 			m_UpperCollider.enabled = false;
 		}
 	}

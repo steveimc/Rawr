@@ -9,9 +9,11 @@ public class HeroStatus : MonoBehaviour
 
 	internal bool m_bHasSword;
 
-	public GameObject m_FrostNova;
+	private GameObject m_FrostNova;
 
 	public PlayerSyncInput syncInput;
+
+	private GameObject[] playerObject = new GameObject[sizeof(GameManager.HeroId)];
 
 	HeroStatus()
 	{
@@ -45,14 +47,16 @@ public class HeroStatus : MonoBehaviour
 			}
 		}
 		this.gameObject.name = "Player" + m_iHeroId;
-
+	
 		if(m_iHeroId == (int)GameManager.HeroId.PLAYER1)
 		{
+			this.transform.GetChild(m_iHeroId).gameObject.SetActive(false);
 			m_bHasSword = true;
 			ToggleSword();
 		}
 		else
 		{
+			this.transform.GetChild((int)GameManager.HeroId.NONE).gameObject.SetActive(false);
 			m_bHasSword = false;
 			ToggleSword();
 		}
@@ -60,6 +64,11 @@ public class HeroStatus : MonoBehaviour
 
 	internal void ToggleSword()
 	{
+		if(!m_FrostNova)
+		{
+			m_FrostNova = GetComponentInChildren<FrostNova>().gameObject;
+		}
+
 		m_FrostNova.SetActive(m_bHasSword);
 	}
 

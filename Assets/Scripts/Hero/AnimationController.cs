@@ -14,6 +14,7 @@ public class AnimationController : MonoBehaviour
 	private HeroStatus m_Hero;
 	private Animator animator;
 	private Vector3 lastPosition;
+	private Vector3 lastDirectionPosition;
 	private Vector3 animatorInput;
 	private float input;
 	private float distance;
@@ -21,10 +22,13 @@ public class AnimationController : MonoBehaviour
 	private const float MULTIPLIER = 10f;
 	private const float ANIMATOR_SMOOTHING = 0.1f;
 
+	HeroBaseController.Direction direction = HeroBaseController.Direction.RIGHT;
+
 	private void Awake()
 	{
 		m_Hero = GetComponent<HeroStatus>();
 		lastPosition = transform.position;
+		lastDirectionPosition = transform.position;
 	}
 
 	// Animate the character depending on it's movement and direction
@@ -52,6 +56,26 @@ public class AnimationController : MonoBehaviour
 
 			animator.SetFloat("VelX", input); // Set animator values
 		}               
+	}
+
+	internal HeroBaseController.Direction CheckDirection()
+	{
+		Vector3 heading = transform.position - lastPosition;
+		lastDirectionPosition = transform.position;
+
+		// Check the direction of the character and transform it from world space to local
+		Vector3 directionInput = transform.InverseTransformDirection(heading);
+
+		if(directionInput.x < 0)
+		{
+			direction = HeroBaseController.Direction.LEFT;
+		}
+		else if(directionInput.x > 0)
+		{
+			direction = HeroBaseController.Direction.RIGHT;
+		}
+
+		return direction;
 	}
 
 	internal void ChangeAnimator()

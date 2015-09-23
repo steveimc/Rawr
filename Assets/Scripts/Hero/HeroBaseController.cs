@@ -5,7 +5,7 @@ public abstract class HeroBaseController : MonoBehaviour
 {
 	protected Rigidbody2D m_HeroRigidBody;
 
-	protected AnimationController animator;
+	protected AnimationController m_animator;
 
 	protected Direction m_Facing;
 
@@ -39,7 +39,7 @@ public abstract class HeroBaseController : MonoBehaviour
 
 	protected bool m_canWallJump;
 
-	protected enum Direction
+	public enum Direction
 	{
 		RIGHT,
 		LEFT
@@ -54,7 +54,7 @@ public abstract class HeroBaseController : MonoBehaviour
 		m_WallLayer 	= 1 << LayerMask.NameToLayer("Wall");
 		m_distance 		= 0.0f;
 		m_DashDistance 	= 5.0f;
-		animator 		= GetComponent<AnimationController>();
+		m_animator 		= GetComponent<AnimationController>();
 		m_HeroRigidBody = GetComponent<Rigidbody2D>();
 		m_canWallJump 	= true;
 	}
@@ -104,7 +104,7 @@ public abstract class HeroBaseController : MonoBehaviour
 
 	internal virtual void Crouch(float fVertical)
 	{
-		animator.Crouch(fVertical);
+		m_animator.Crouch(fVertical);
 
 		if(fVertical < -0.1 && m_isCrouching == false)
 		{
@@ -119,15 +119,26 @@ public abstract class HeroBaseController : MonoBehaviour
 
 	}
 
+	internal virtual void Flip(Transform objectToFlip)
+	{
+		if(m_isCharging || m_isCrouching)
+			return;
+
+		float fScale = objectToFlip.localScale.y;
+
+		if(m_Facing == Direction.RIGHT)
+			objectToFlip.localScale = new Vector3(fScale,fScale,fScale);
+		else
+			objectToFlip.localScale = new Vector3(-fScale,fScale,fScale);
+
+	}
+
+
 	internal abstract void Move(float fHorizontal, float fVertical, bool bJump, bool bDash);
 
 	internal abstract void Jump();
 
 	internal abstract void Attack(float fHorizontal, bool bAttack, bool bCharge);
-
-	internal abstract void CheckDirection(float fInput);
-
-	internal abstract void Flip(Transform objectToFlip);
 
 	internal abstract void Dash();
 

@@ -7,7 +7,9 @@ public class HeroControllerSword : HeroBaseController
 
 	internal override void Move(float fHorizontal, float fVertical, bool bJump, bool bDash)
 	{
-		CheckDirection(fHorizontal);
+		m_Facing = m_animator.CheckDirection();
+		Flip(this.transform);
+
 		m_comboTimer += Time.fixedDeltaTime;
 
 		if(m_comboTimer > 0.7f)
@@ -18,12 +20,12 @@ public class HeroControllerSword : HeroBaseController
 
 		if(!IsGrounded() && !m_isFalling)
 		{
-			animator.Fall();
+			m_animator.Fall();
 			m_isFalling = true;
 		}
 		else if(IsGrounded())
 		{
-			animator.IsGrounded();
+			m_animator.IsGrounded();
 			m_isFalling = false;
 		}
 
@@ -126,14 +128,14 @@ public class HeroControllerSword : HeroBaseController
 
 	internal override void Jump()
 	{
-		animator.Jump();
+		m_animator.Jump();
 	}
 		
 	internal override void Attack(float fHorizontal, bool bAttack, bool bCharge)
 	{
 		if(bCharge && !m_isSpinning && IsGrounded() && !IsMoving(fHorizontal) && m_AttackType == 0)
 		{
-			animator.Charge();
+			m_animator.Charge();
 			m_isCharging = true;
 			m_chargeTimer = 0;
 		}
@@ -156,7 +158,7 @@ public class HeroControllerSword : HeroBaseController
 
 		if(m_chargeTimer > 2 && !m_isSpinning && m_AttackType == 0 && m_isCharging)
 		{
-			animator.Spin();
+			m_animator.Spin();
 			m_chargeTimer = 0;
 			m_isSpinning = true;
 			m_isCharging = false;
@@ -183,7 +185,7 @@ public class HeroControllerSword : HeroBaseController
 			else
 			{
 				m_isCharging = false;
-				animator.Attack(m_AttackType);
+				m_animator.Attack(m_AttackType);
 
 				if(m_AttackType == 0)
 					m_comboTimer = 0;
@@ -196,34 +198,6 @@ public class HeroControllerSword : HeroBaseController
 
 	}
 		
-	internal override void CheckDirection(float fInput)
-	{
-		if(fInput < -0.2f)
-		{
-			m_Facing = Direction.LEFT;
-			Flip (this.transform);
-		}
-		else if(fInput > 0.2f)
-		{
-			m_Facing = Direction.RIGHT;
-			Flip (this.transform);
-		}
-	}
-
-	internal override void Flip(Transform objectToFlip)
-	{
-		if(m_isCharging || m_isCrouching)
-			return;
-		
-		float fScale = objectToFlip.localScale.y;
-
-		if(m_Facing == Direction.RIGHT)
-			objectToFlip.localScale = new Vector3(fScale,fScale,fScale);
-		else
-			objectToFlip.localScale = new Vector3(-fScale,fScale,fScale);
-
-	}
-
 	internal override void Dash()
 	{
 		if(m_Facing == Direction.RIGHT)
@@ -233,7 +207,7 @@ public class HeroControllerSword : HeroBaseController
 
 		if(!m_isSpinning)
 		{
-			animator.Dash();
+			m_animator.Dash();
 			m_UpperCollider.enabled = false;
 		}
 	}
