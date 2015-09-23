@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Hero\User Interface\Screens\TitlePanel.cs" />
      <Compile Include="Assets\Scripts\Hero\User Interface\Screens\UINetworkManager.cs" />
      <Compile Include="Assets\Scripts\InputBank.cs" />
+     <Compile Include="Assets\Scripts\KillBox.cs" />
      <Compile Include="Assets\Scripts\Network\PlayerSyncInput.cs" />
      <Compile Include="Assets\Scripts\Network\PlayerSyncPosition.cs" />
      <Compile Include="Assets\Scripts\UserControls.cs" />
