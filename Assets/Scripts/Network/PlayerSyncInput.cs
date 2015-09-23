@@ -4,21 +4,23 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+public enum UserInput
+{
+	Jump, 
+	Dash,
+	Attack1,
+	Attack2,
+	Attack3,
+	Crouch,
+	WallJump
+}
+
 public class PlayerSyncInput : NetworkBehaviour 
 {
-	struct UserInput
-	{
-		public double time;
-		public float 	x;
-		public float 	y;
-		public bool 	j;
-		public bool 	d;
-	}
-	// float fHorizontal, float fVertical, bool bJump, bool bDash
-
 	[ SyncVar (hook = "SyncUserInput") ] private UserInput syncUserInput;
 
 	private HeroBaseController myHeroController;
+	private AnimationController heroAnimator;
 	private NetworkClient networkClient;
 	private float latency;
 	private Text latencyText;
@@ -32,59 +34,16 @@ public class PlayerSyncInput : NetworkBehaviour
 		if(Game.Instance.IsLocalGame)
 			return;
 
-			networkClient = GameObject.Find("NetworkManager").GetComponent<NetworkManager>().client;
-			latencyText = GameObject.Find("LatencyText").GetComponent<Text>();
-
-			if(!isLocalPlayer)
-			{
-				GetComponent<UserControls>().enabled = false;
-				// This will prevent it from calculating physics. If it wont ever be needed we should just remove it
-				//GetComponent<Rigidbody2D>().isKinematic = true; 
-				GetComponent<Renderer>().material.color = Color.red;
-				myHeroController = GetComponent<HeroBaseController>();
-			}
-			else if(isLocalPlayer)
-			{
-				GetComponent<Renderer>().material.color = Color.blue;
-				FindObjectOfType<CameraController>().Init(this.transform);
-			}
-
-			if(isServer)
-				GameObject.Find("ServerOrClient").GetComponent<Text>().text = "Server"; 
-		}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		if(Game.Instance.IsLocalGame)
-			return;
-
-		ShowLatency ();
-		MovePlayer();
-	}
-
-	// Time delta time for fixed update is constant
-	void FixedUpdate () 
-	{
-		if(Game.Instance.IsLocalGame)
-			return;
-		
-		//SendInput ();
+		myHeroController = GetComponent<HeroBaseController>();
+		heroAnimator = GetComponent<AnimationController>();
 	}
 
 	[ClientCallback] 
-	public void SendInput(float fHorizontal, float fVertical, bool bJump, bool bDash)
+	public void SendInput(UserInput input)
 	{
 		if(isLocalPlayer)
 		{
-			UserInput lastInput = new UserInput();
-			lastInput.time = Time.timeSinceLevelLoad;
-			lastInput.x = fHorizontal;
-			lastInput.y = fVertical;
-			lastInput.j = bJump;
-			lastInput.d = bDash;
-
-			CmdSendInputToServer(lastInput);
+			CmdSendInputToServer(input);
 		}
 	}
 
@@ -98,34 +57,38 @@ public class PlayerSyncInput : NetworkBehaviour
 	void SyncUserInput(UserInput latestInput)
 	{
 		syncUserInput = latestInput;
-		
-		if(!isLocalPlayer)
-			userInputList.Add (syncUserInput);
-	}
 
-	void MovePlayer()
-	{
-		if(!isLocalPlayer && userInputList.Count > 0)
-		{
-			if(userInputList[0].time + 0.1f >= Time.timeSinceLevelLoad)
-			{
-				ApplyInput(userInputList[0]);
-				userInputList.RemoveAt(0);
-			}
-		}
+		ApplyInput(latestInput);
 	}
 
 	void ApplyInput(UserInput input)
 	{
-		myHeroController.Move(input.x, input.y, input.j, input.d );
-	}
-
-	void ShowLatency()
-	{
-		if(isLocalPlayer)
+		switch(input)
 		{
-			latency = networkClient.GetRTT();
-			latencyText.text = latency.ToString();
+			case UserInput.Jump:
+				heroAnimator.Jump();
+				break;
+			case UserInput.Dash:
+				heroAnimator.Dash();
+				break;
+			case UserInput.Crouch:
+				//heroAnimator.Crouch();
+				break;
+			case UserInput.Attack1:
+				heroAnimator.Attack(0);
+				break;
+			case UserInput.Attack2:
+				heroAnimator.Attack(1);
+				break;
+			case UserInput.Attack3:
+				heroAnimator.Attack(2);
+				break;	
+			case UserInput.WallJump:
+				Debug.Log("wall jump");
+				break;
+			default:
+				Debug.LogWarning("Input not recognized");
+				break;
 		}
 	}
 }

@@ -11,6 +11,8 @@ public class HeroStatus : MonoBehaviour
 
 	public GameObject m_FrostNova;
 
+	public PlayerSyncInput syncInput;
+
 	HeroStatus()
 	{
 		m_iFatigue = 1000;
@@ -24,15 +26,13 @@ public class HeroStatus : MonoBehaviour
 		if(Game.Instance.IsLocalGame)
 		{
 			m_iHeroId = GameManager.Instance.PlayerJoined();
-			if(Game.Instance.IsLocalGame)
-			{
-				GetComponent<PlayerSyncPosition>().enabled = false;
-			}
+			GetComponent<PlayerSyncPosition>().enabled = false;
+			GetComponent<PlayerSyncInput>().enabled = false;
 		}
-
-		if(!Game.Instance.IsLocalGame)
+		else
 		{
-			if(this.GetComponent<PlayerSyncPosition>().isLocalPlayer)
+			syncInput =  this.gameObject.GetComponent<PlayerSyncInput>();
+			if(syncInput.isLocalPlayer)
 			{
 				m_iHeroId = 1;
 			}
@@ -41,7 +41,6 @@ public class HeroStatus : MonoBehaviour
 				m_iHeroId = 2;
 			}
 		}
-
 		this.gameObject.name = "Player" + m_iHeroId;
 
 		if(m_iHeroId == (int)GameManager.HeroId.PLAYER1)
@@ -74,5 +73,11 @@ public class HeroStatus : MonoBehaviour
 	public int GetFatigue()
 	{
 		return m_iHeroHealth;
+	}
+
+	public void SendInput(UserInput animatorState)
+	{
+		if(syncInput != null)
+			syncInput.SendInput(animatorState);
 	}
 }

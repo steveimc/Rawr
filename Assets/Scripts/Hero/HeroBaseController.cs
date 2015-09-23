@@ -106,7 +106,7 @@ public abstract class HeroBaseController : MonoBehaviour
 	{
 		animator.Crouch(fVertical);
 
-		if(fVertical < -0.1)
+		if(fVertical < -0.1 && m_isCrouching == false)
 		{
 			m_isCrouching = true;
 			m_UpperCollider.enabled = false;

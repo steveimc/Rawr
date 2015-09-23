@@ -65,11 +65,13 @@ public class AnimationController : MonoBehaviour
 	internal void Dash()
 	{
 		animator.SetTrigger("Dash");
+		m_Hero.SendInput(UserInput.Dash);
 	}
 
 	internal void Jump()
 	{
 		animator.SetTrigger("Jump");
+		m_Hero.SendInput(UserInput.Jump);
 	}
 
 	internal void Crouch(float fCrouch)
@@ -83,14 +85,17 @@ public class AnimationController : MonoBehaviour
 		{
 			case AttackType.ATTACK_ONE:
 				animator.SetTrigger("Attack1");
+				m_Hero.SendInput(UserInput.Attack1);
 				break;
 
 			case AttackType.ATTACK_TWO:
 				animator.SetTrigger("Attack2");
+				m_Hero.SendInput(UserInput.Attack2);
 				break;
 
 			case AttackType.ATTACK_THREE:
 				animator.SetTrigger("Attack3");
+				m_Hero.SendInput(UserInput.Attack3);
 				break;
 		}
 	}

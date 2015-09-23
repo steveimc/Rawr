@@ -129,7 +129,6 @@ public class PlayerSyncPosition : NetworkBehaviour
 	
 	void NormalLerp()
 	{
-		//Debug.Log(" FROM: " + thisTransform.position + " TO: " + syncPos );
 		thisTransform.position = Vector3.Lerp(thisTransform.position, syncPos, Time.deltaTime * lerpRate);
 	}
 
@@ -148,8 +147,6 @@ public class PlayerSyncPosition : NetworkBehaviour
 				lerpRate = fasterLerpRate;
 			else
 				lerpRate = normalLerpRate;
-
-			// Debug.Log("playerPos" + syncPosList.Count.ToString());
 		}
 	}
 
