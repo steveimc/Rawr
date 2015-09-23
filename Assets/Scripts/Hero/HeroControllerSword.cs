@@ -4,6 +4,7 @@ using System.Collections;
 public class HeroControllerSword : HeroBaseController 
 {
 	public Rigidbody2D m_FrostNova;
+	internal bool m_isThrowingSword;
 
 	internal override void Move(float fHorizontal, float fVertical, bool bJump, bool bDash)
 	{
@@ -165,22 +166,11 @@ public class HeroControllerSword : HeroBaseController
 		}
 		else
 		{
-			if(IsMoving(fHorizontal))
+			if(IsMoving(fHorizontal) && !m_isThrowingSword)
 			{
+				m_isThrowingSword = true;
 				m_isCharging = false;
-				Rigidbody2D projectile;
-				projectile = Instantiate(m_FrostNova, transform.position, transform.rotation) as Rigidbody2D;
-
-				if(m_Facing == Direction.RIGHT)
-				{
-					Flip (projectile.transform);
-					projectile.velocity = transform.TransformDirection(Vector2.right * m_ProjectileForce);
-				}
-				else
-				{
-					Flip (projectile.transform);
-					projectile.velocity = transform.TransformDirection(Vector2.left * m_ProjectileForce);
-				}
+				ThrowSword();
 			}
 			else
 			{
@@ -195,6 +185,12 @@ public class HeroControllerSword : HeroBaseController
 				m_AttackType++;
 			}
 		}	
+
+	}
+
+	internal void ThrowSword()
+	{
+		m_animator.SpinToThrow();
 
 	}
 		

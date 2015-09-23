@@ -25,7 +25,12 @@ public class UserControls : MonoBehaviour
 	{
 		if(m_Controller == null)
 		{
-			ChangeHeroController();
+			m_Hero.ChangeHeroController();
+			m_Controller = m_Hero.m_Controller;
+		}
+		else if(m_Controller != m_Hero.m_Controller)
+		{
+			m_Controller = m_Hero.m_Controller;
 		}
 		else
 		{
@@ -40,8 +45,9 @@ public class UserControls : MonoBehaviour
 
 			if(Input.GetButtonDown(InputBank.SWORD+m_Hero.m_iHeroId))
 			{
-				m_Hero.ToggleSword();
-				ChangeHeroController();
+				m_Hero.DropSword();
+				m_Hero.ChangeHeroController();
+				m_Controller = m_Hero.m_Controller;
 				m_AnimationController.ChangeAnimator();
 			}
 
@@ -59,13 +65,4 @@ public class UserControls : MonoBehaviour
 			m_bCharge = false;
 		}
 	}
-
-	private void ChangeHeroController()
-	{
-		if(m_Hero.m_bHasSword)
-			m_Controller = GetComponent<HeroControllerSword>();
-		else
-			m_Controller = GetComponent<HeroControllerNoSword>();
-	}
-
 }

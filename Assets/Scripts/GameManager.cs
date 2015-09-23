@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 	[SerializeField] GameObject spawnPoint;
 	[SerializeField] GameObject playerPrefab;
 
+	internal HeroStatus[] player = new HeroStatus[2];
+	public GameObject m_FrostNovaCopy;
+
 	private int playerCount = 0;
 
 	public enum HeroId
@@ -47,8 +50,10 @@ public class GameManager : MonoBehaviour
 			Instantiate(playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
 	}
 
-	public int PlayerJoined()
+	public int PlayerJoined(HeroStatus hero)
 	{
+		player[playerCount] = hero;
+			
 		playerCount ++;
 		return playerCount;
 	}

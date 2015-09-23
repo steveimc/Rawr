@@ -52,7 +52,7 @@ public class AnimationController : MonoBehaviour
 
 			if(animatorInput.x < 0)
 				input = animatorInput.x * -1;		
-			else
+			else if(animatorInput.x > 0)
 				input = animatorInput.x;
 
 			animator.SetFloat("VelX", input); // Set animator values
@@ -67,11 +67,11 @@ public class AnimationController : MonoBehaviour
 		// Check the direction of the character and transform it from world space to local
 		Vector3 directionInput = transform.InverseTransformDirection(heading);
 
-		if(directionInput.x < -0.1)
+		if(directionInput.x < -0.15)
 		{
 			direction = HeroBaseController.Direction.LEFT;
 		}
-		else if(directionInput.x > 0.1)
+		else if(directionInput.x > 0.15)
 		{
 			direction = HeroBaseController.Direction.RIGHT;
 		}
@@ -136,6 +136,11 @@ public class AnimationController : MonoBehaviour
 	internal void Spin()
 	{
 		animator.SetTrigger("Spin");
+	}
+
+	internal void SpinToThrow()
+	{
+		animator.SetTrigger("SpinToThrow");
 	}
 
 	internal void Fall()

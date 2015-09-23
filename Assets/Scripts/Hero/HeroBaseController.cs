@@ -19,7 +19,7 @@ public abstract class HeroBaseController : MonoBehaviour
 	[SerializeField] protected float m_MaxSpeed;                    // The fastest the player can travel in the x axis.
 	[SerializeField] protected float m_JumpForce;                  // Amount of force added when the player jumps.
 	[SerializeField] protected float m_DashForce;  
-	[SerializeField] protected float m_ProjectileForce;
+	[SerializeField] internal float m_ProjectileForce;
 	[SerializeField] protected float m_DashDistance;
 
 	[SerializeField] protected BoxCollider2D m_UpperCollider;
