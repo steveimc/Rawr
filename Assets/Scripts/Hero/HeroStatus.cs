@@ -64,7 +64,7 @@ public class HeroStatus : MonoBehaviour
 
 	internal void ToggleSword()
 	{
-		if(!m_FrostNova)
+		if(m_FrostNova == null)
 		{
 			m_FrostNova = GetComponentInChildren<FrostNova>().gameObject;
 		}
