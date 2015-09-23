@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ModePanel : MonoBehaviour
+public class ModePanel : BaseScreen
 {
 	[SerializeField] MenuButton[] buttons;
 	[SerializeField] MenuTip[] buttonTips;
@@ -65,19 +65,19 @@ public class ModePanel : MonoBehaviour
 
 		switch(clickedButton.GetButtonType())
 		{
-			case MenuButtons.SinglePlayer:
+			case GameMode.SinglePlayer:
 				OnSinglePlayerMode();
 				break;
-			case MenuButtons.Arcade:
+			case GameMode.Arcade:
 				OnArcadeMode();
 				break;
-			case MenuButtons.Local:
+			case GameMode.Local:
 				OnLocalMultiplayer();
 				break;
-			case MenuButtons.Online:
+			case GameMode.Online:
 				OnOnlineMultiplayer();
 				break;
-			case MenuButtons.Lan:
+			case GameMode.Lan:
 				OnLanMultiplayer();
 				break;
 			default:
@@ -103,13 +103,12 @@ public class ModePanel : MonoBehaviour
 
 	public void OnLanMultiplayer()
 	{
-		Debug.Log("Lan");
+		ScreenManager.instance.Push<MenuLan>();
 	}
 
 	public void OnOnlineMultiplayer()
 	{
-		Debug.Log("Online");
 		UINetworkManager.instance.EnableMatchMaker();
-		menuOnline.gameObject.SetActive(true);
+		ScreenManager.instance.Push<MenuOnline>();
 	}
 }

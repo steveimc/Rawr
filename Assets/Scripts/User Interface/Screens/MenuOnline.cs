@@ -4,11 +4,10 @@ using UnityEngine.UI;
 using UnityEngine.Networking.Match;
 using UnityEngine.Networking;
 
-public class MenuOnline : MonoBehaviour 
+public class MenuOnline : BaseScreen 
 {
 	[SerializeField] private InputField matchNameInput;
-
-
+	
 	public void OnClickCreateMatchmakingGame()
 	{
 		UINetworkManager.instance.SetMatch(matchNameInput.text, 2);

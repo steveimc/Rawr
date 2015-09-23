@@ -2,13 +2,14 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class TitlePanel : MonoBehaviour 
+public class TitlePanel : BaseScreen 
 {
 	[SerializeField] private Button playButton;
 	public void OnPlayButton()
 	{
 		float newX = transform.position.x - 1000;
-		StartCoroutine(SlideHorizontal(transform.position.x, newX));
+		ScreenManager.instance.Push<ModePanel>();
+		//StartCoroutine(SlideHorizontal(transform.position.x, newX));
 	}
 
 	float slideSpeed = 8.0f;
