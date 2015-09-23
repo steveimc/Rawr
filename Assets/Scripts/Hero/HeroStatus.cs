@@ -28,6 +28,9 @@ public class HeroStatus : MonoBehaviour
 			m_iHeroId = GameManager.Instance.PlayerJoined();
 			GetComponent<PlayerSyncPosition>().enabled = false;
 			GetComponent<PlayerSyncInput>().enabled = false;
+
+				if (m_iHeroId ==1)
+					FindObjectOfType<CameraController>().Init(this.transform);
 		}
 		else
 		{

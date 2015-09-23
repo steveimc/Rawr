@@ -1,13 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Hero/HeroStatus.cs">
     <Files>
-      <File FileName="Assets/Scripts/Hero/User Interface/Screens/ModePanel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Game.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CameraController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Hero/HeroStatus.cs" Line="7" Column="28" />
-      <File FileName="Assets/Scripts/Network/PlayerSyncPosition.cs" Line="152" Column="4" />
+      <File FileName="Assets/Scripts/Hero/HeroStatus.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Network/PlayerSyncInput.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Hero/AnimationController.cs" Line="98" Column="39" />
+      <File FileName="Assets/Scripts/Hero/User Interface/Editor/MenuButtonEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UserControls.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Hero/HeroBaseController.cs" Line="112" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
