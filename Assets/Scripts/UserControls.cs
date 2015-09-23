@@ -40,7 +40,7 @@ public class UserControls : MonoBehaviour
 
 			if(Input.GetButtonDown(InputBank.SWORD+m_Hero.m_iHeroId))
 			{
-				m_Hero.m_bHasSword = !m_Hero.m_bHasSword;
+				m_Hero.ToggleSword();
 				ChangeHeroController();
 				m_AnimationController.ChangeAnimator();
 			}
@@ -66,8 +66,6 @@ public class UserControls : MonoBehaviour
 			m_Controller = GetComponent<HeroControllerSword>();
 		else
 			m_Controller = GetComponent<HeroControllerNoSword>();
-
-		m_Hero.ToggleSword();
 	}
 
 }

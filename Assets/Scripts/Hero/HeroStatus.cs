@@ -7,11 +7,11 @@ public class HeroStatus : MonoBehaviour
 	internal int m_iHeroHealth;
 	internal int m_iFatigue;
 
-	internal bool m_bHasSword;
+	internal bool m_bHasSword = true;
 
 	private GameObject m_FrostNova;
 
-	public PlayerSyncInput syncInput;
+	internal PlayerSyncInput syncInput;
 
 	private GameObject[] playerObject = new GameObject[sizeof(GameManager.HeroId)];
 
@@ -33,6 +33,19 @@ public class HeroStatus : MonoBehaviour
 
 				if (m_iHeroId ==1)
 					FindObjectOfType<CameraController>().Init(this.transform);
+
+			if(m_iHeroId == (int)GameManager.HeroId.PLAYER1)
+			{
+				this.transform.GetChild(m_iHeroId).gameObject.SetActive(false);
+				m_bHasSword = true;
+				ToggleSword(); // m_bHasSword will be false and hide the sword	
+			}
+			else
+			{
+				this.transform.GetChild((int)GameManager.HeroId.NONE).gameObject.SetActive(false);
+				m_bHasSword = true;
+				ToggleSword();
+			}
 		}
 		else
 		{
@@ -40,36 +53,46 @@ public class HeroStatus : MonoBehaviour
 			if(syncInput.isLocalPlayer)
 			{
 				m_iHeroId = 1;
+				this.transform.GetChild(m_iHeroId).gameObject.SetActive(false);
+				ToggleSword();
 			}
 			else
 			{
 				m_iHeroId = 2;
+				this.transform.GetChild((int)GameManager.HeroId.NONE).gameObject.SetActive(false);
 			}
 		}
 		this.gameObject.name = "Player" + m_iHeroId;
-	
-		if(m_iHeroId == (int)GameManager.HeroId.PLAYER1)
-		{
-			this.transform.GetChild(m_iHeroId).gameObject.SetActive(false);
-			m_bHasSword = true;
-			ToggleSword();
-		}
-		else
-		{
-			this.transform.GetChild((int)GameManager.HeroId.NONE).gameObject.SetActive(false);
-			m_bHasSword = false;
-			ToggleSword();
-		}
 	}
 
 	internal void ToggleSword()
 	{
+		m_bHasSword = !m_bHasSword;
+
 		if(m_FrostNova == null)
 		{
 			m_FrostNova = GetComponentInChildren<FrostNova>().gameObject;
 		}
-
 		m_FrostNova.SetActive(m_bHasSword);
+
+		// This shouldnt happen in remote cuz it checks isLocalplayer before sending
+		if(syncInput != null)
+		{
+			if(m_bHasSword)
+				syncInput.SendInput(UserInput.ToggleSwordON);
+			else if(!m_bHasSword)
+				syncInput.SendInput(UserInput.ToggleSwordOFF);
+		}
+	}
+
+	internal void ToggleSwordFromNetwork(bool state)
+	{
+		m_bHasSword = state;
+		if(m_FrostNova == null)
+		{
+			m_FrostNova = GetComponentInChildren<FrostNova>().gameObject;
+		}
+		m_FrostNova.SetActive(state);
 	}
 
 	public void TakeDamage(int dmg)

@@ -12,12 +12,18 @@ public enum UserInput
 	Attack2,
 	Attack3,
 	Crouch,
+	CrouchStop,
+	ToggleSword,
+	ToggleSwordON,
+	ToggleSwordOFF,
 	WallJump
 }
 
 public class PlayerSyncInput : NetworkBehaviour 
 {
 	[ SyncVar (hook = "SyncUserInput") ] private UserInput syncUserInput;
+
+	public HeroStatus heroStatus;
 
 	private HeroBaseController myHeroController;
 	private AnimationController heroAnimator;
@@ -35,7 +41,8 @@ public class PlayerSyncInput : NetworkBehaviour
 			return;
 
 		myHeroController = GetComponent<HeroBaseController>();
-		heroAnimator = GetComponent<AnimationController>();
+		heroAnimator 		= GetComponent<AnimationController>();
+		//heroStatus 				= GetComponent<HeroStatus>();
 	}
 
 	[ClientCallback] 
@@ -72,7 +79,10 @@ public class PlayerSyncInput : NetworkBehaviour
 				heroAnimator.Dash();
 				break;
 			case UserInput.Crouch:
-				//heroAnimator.Crouch();
+				heroAnimator.Crouch(-10.0f);
+				break;
+			case UserInput.CrouchStop:
+				heroAnimator.Crouch(10.0f);
 				break;
 			case UserInput.Attack1:
 				heroAnimator.Attack(0);
@@ -83,6 +93,17 @@ public class PlayerSyncInput : NetworkBehaviour
 			case UserInput.Attack3:
 				heroAnimator.Attack(2);
 				break;	
+			/*
+			 * case UserInput.ToggleSword:
+					heroStatus.ToggleSwordFromNetwork();
+				break;
+			 */
+			case UserInput.ToggleSwordON:
+				heroStatus.ToggleSwordFromNetwork(true);
+				break;
+			case UserInput.ToggleSwordOFF:
+				heroStatus.ToggleSwordFromNetwork(false);
+				break;
 			case UserInput.WallJump:
 				Debug.Log("wall jump");
 				break;

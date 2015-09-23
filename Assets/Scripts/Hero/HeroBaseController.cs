@@ -5,9 +5,9 @@ public abstract class HeroBaseController : MonoBehaviour
 {
 	protected Rigidbody2D m_HeroRigidBody;
 
-	protected AnimationController m_animator;
+	internal AnimationController m_animator;
 
-	protected Direction m_Facing;
+	internal Direction m_Facing;
 
 	protected Vector3 m_LastPos;
 
@@ -108,15 +108,20 @@ public abstract class HeroBaseController : MonoBehaviour
 
 		if(fVertical < -0.1 && m_isCrouching == false)
 		{
+			if(m_animator.m_Hero.syncInput != null)
+				m_animator.m_Hero.syncInput.SendInput(UserInput.Crouch);
+
 			m_isCrouching = true;
 			m_UpperCollider.enabled = false;
 		}
-		else
+		else if(fVertical > -0.1 && m_isCrouching == true)
 		{
+			if(m_animator.m_Hero.syncInput != null)
+				m_animator.m_Hero.syncInput.SendInput(UserInput.CrouchStop);
+
 			m_isCrouching = false;
 			m_UpperCollider.enabled = true;
 		}
-
 	}
 
 	internal virtual void Flip(Transform objectToFlip)

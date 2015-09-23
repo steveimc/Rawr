@@ -9,11 +9,13 @@ public class PlayerSyncPosition : NetworkBehaviour
 	[SyncVar (hook = "SyncPositionValues") ] private Vector3 syncPos; // This will automatically replace for this object in all clients
 	// hook: instead of replacing variable, calls this function and giver var as param
 
+	[SerializeField] private HeroBaseController heroController;
 	[SerializeField] private Transform thisTransform;
-	private float lerpRate = 15f;
+						
 	[SerializeField] private float normalLerpRate = 20;
 	[SerializeField] private float fasterLerpRate = 30;
-	
+	private float lerpRate = 15f;
+
 	private Vector3 lastPos;
 	private float distanceThreshold = 0.02f;
 	
@@ -36,6 +38,7 @@ public class PlayerSyncPosition : NetworkBehaviour
 			networkClient = GameObject.Find("NetworkManager").GetComponent<NetworkManager>().client;
 			latencyText = GameObject.Find("LatencyText").GetComponent<Text>();
 			lerpRate = normalLerpRate;
+			heroController = GetComponent<HeroBaseController>();
 
 			if(!isLocalPlayer)
 			{
@@ -109,13 +112,14 @@ public class PlayerSyncPosition : NetworkBehaviour
 	void SyncPositionValues(Vector3 latestPos)
 	{
 		syncPos = latestPos;
+		heroController.m_Facing = heroController.m_animator.CheckDirection();
+		heroController.Flip(this.transform);
 
 		if(!isLocalPlayer)
 		{
 			syncPosList.Add (syncPos);
 			timeStamps.Add(Time.timeSinceLevelLoad + lag);
 		}
-		Debug.Log("pos Received: " + latestPos );
 	}
 	
 	void ShowLatency()

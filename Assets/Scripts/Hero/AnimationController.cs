@@ -10,8 +10,9 @@ public class AnimationController : MonoBehaviour
 		ATTACK_THREE
 	}
 
+	internal HeroStatus m_Hero;
 	// Private ---------------------------------------
-	private HeroStatus m_Hero;
+
 	private Animator animator;
 	private Vector3 lastPosition;
 	private Vector3 lastDirectionPosition;
@@ -66,11 +67,11 @@ public class AnimationController : MonoBehaviour
 		// Check the direction of the character and transform it from world space to local
 		Vector3 directionInput = transform.InverseTransformDirection(heading);
 
-		if(directionInput.x < 0)
+		if(directionInput.x < -0.1)
 		{
 			direction = HeroBaseController.Direction.LEFT;
 		}
-		else if(directionInput.x > 0)
+		else if(directionInput.x > 0.1)
 		{
 			direction = HeroBaseController.Direction.RIGHT;
 		}
@@ -80,6 +81,9 @@ public class AnimationController : MonoBehaviour
 
 	internal void ChangeAnimator()
 	{
+		if(animator == null)
+			return;
+
 		if(m_Hero.m_bHasSword)
 			animator.runtimeAnimatorController = Resources.Load("Hero_Sword") as RuntimeAnimatorController;
 		else
