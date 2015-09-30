@@ -77,7 +77,8 @@ public class Game : MonoBehaviour
 
 	void Update()
 	{
-		// Debug.Log ("GAME: " + IsLocalGame);
+		if(Input.GetKeyDown(KeyCode.Escape))
+			Application.Quit();
 	}
 
 	private void AddButtonListener()
