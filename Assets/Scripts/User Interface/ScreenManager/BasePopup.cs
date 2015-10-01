@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 using System;
-public class BasePopup : BaseScreen {
+public class BasePopup : BaseScreen 
+{
 
 	public Text descriptionText;
 	public Button cancelButton;
@@ -34,6 +35,16 @@ public class BasePopup : BaseScreen {
 		if(okCallback != null)
 		{
 			okCallback();
+		}
+	}
+
+	protected override void OnControllerInput(ControllerEvent controllerInput)
+	{
+		switch(controllerInput)
+		{
+		case ControllerEvent.B_Button:
+			ScreenManager.instance.Pop();
+			break;
 		}
 	}
 }

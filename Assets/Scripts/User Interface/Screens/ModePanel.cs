@@ -16,6 +16,36 @@ public class ModePanel : BaseScreen
 		SelectButton(0);
 	}
 
+	protected override void OnControllerInput(ControllerEvent controllerInput)
+	{
+		switch(controllerInput)
+		{
+		case ControllerEvent.Up:
+			if(currentlySelected  == 0)
+			{
+				SelectButton(buttons.Length -1);
+			}
+			else
+			{
+				SelectButton(currentlySelected - 1);
+			}
+			break;
+		case ControllerEvent.Down:
+			if(currentlySelected == buttons.Length -1)
+			{
+				SelectButton(0);
+			}
+			else
+			{
+				SelectButton(currentlySelected + 1);
+			}
+			break;
+		case ControllerEvent.A_Button:
+			PressButton(buttons[currentlySelected]);
+			break;
+		}
+	}
+
 	void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.UpArrow))

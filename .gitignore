@@ -67,3 +67,9 @@ Library/metadata/0c/0c676be6211c947deb8fb2fed9962cda
 Library/metadata/0c/0c676be6211c947deb8fb2fed9962cda
 
 Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+
+*.nib
+
+*.dll
+
+*.assets

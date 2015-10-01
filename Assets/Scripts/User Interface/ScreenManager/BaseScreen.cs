@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseScreen : MonoBehaviour
+public abstract class BaseScreen : MonoBehaviour
 {
 	public bool hideCurrent = true; 
 	public virtual void OnPush() 
@@ -34,4 +34,9 @@ public class BaseScreen : MonoBehaviour
 	{
 		ScreenManager.instance.Pop();
 	}
+
+	void OnEnable()		{ 	ControllerInputManager.OnControllerEvent += OnControllerInput; 	}
+	void OnDisable()	{	ControllerInputManager.OnControllerEvent -= OnControllerInput;	}
+	
+	protected abstract void OnControllerInput(ControllerEvent controllerInput);
 }

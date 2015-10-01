@@ -60,30 +60,57 @@
      <Compile Include="Assets\Scripts\Network\PlayerSyncInput.cs" />
      <Compile Include="Assets\Scripts\Network\PlayerSyncPosition.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
+     <Compile Include="Assets\Scripts\User Interface\ControllerInputManager.cs" />
      <Compile Include="Assets\Scripts\User Interface\HUD Elements\UIFilledBar.cs" />
      <Compile Include="Assets\Scripts\User Interface\HUD Elements\UIPlayer.cs" />
      <Compile Include="Assets\Scripts\User Interface\HUDController.cs" />
+     <Compile Include="Assets\Scripts\User Interface\ScreenKeyboard.cs" />
      <Compile Include="Assets\Scripts\User Interface\ScreenManager\BasePopup.cs" />
      <Compile Include="Assets\Scripts\User Interface\ScreenManager\BaseScreen.cs" />
      <Compile Include="Assets\Scripts\User Interface\ScreenManager\ScreenManager.cs" />
+     <Compile Include="Assets\Scripts\User Interface\Screens\KeyboardPopup.cs" />
      <Compile Include="Assets\Scripts\User Interface\Screens\MenuLan.cs" />
      <Compile Include="Assets\Scripts\User Interface\Screens\MenuOnline.cs" />
      <Compile Include="Assets\Scripts\User Interface\Screens\ModePanel.cs" />
      <Compile Include="Assets\Scripts\User Interface\Screens\TitlePanel.cs" />
+     <Compile Include="Assets\Scripts\User Interface\Tweens\UIFadeTween.cs" />
+     <Compile Include="Assets\Scripts\User Interface\Tweens\UIPositionTween.cs" />
+     <Compile Include="Assets\Scripts\User Interface\Tweens\UITween.cs" />
+     <Compile Include="Assets\Scripts\User Interface\UI Elements\ControllerButton.cs" />
      <Compile Include="Assets\Scripts\User Interface\UI Elements\MenuButton.cs" />
      <Compile Include="Assets\Scripts\User Interface\UI Elements\MenuTip.cs" />
      <Compile Include="Assets\Scripts\User Interface\UINetworkManager.cs" />
      <Compile Include="Assets\Scripts\UserControls.cs" />
+     <None Include="Assets\Plugins\DOTween\readme.txt" />
      <None Include="Assets\Art\Fonts\Norse\freefont_EULA_v1-00.txt" />
+     <None Include="Assets\Plugins\DOTween\DOTween43.xml" />
+     <None Include="Assets\Plugins\DOTween\DOTween50.xml" />
+     <None Include="Assets\Plugins\DOTween\DOTween46.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/andreia/Desktop/Super Final Project/Unity/Rawr/Assets/Plugins/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/andreia/Desktop/Super Final Project/Unity/Rawr/Assets/Plugins/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>/Users/andreia/Desktop/Super Final Project/Unity/Rawr/Assets/Plugins/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>/Users/andreia/Desktop/Super Final Project/Unity/Rawr/Assets/Plugins/DOTween/DOTween50.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{A4C2BFF4-35B7-1A98-9393-9D8762CEFCDF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
