@@ -7,6 +7,9 @@ public class HeroControllerNoSword : HeroBaseController
 
 	internal override void Move(float fHorizontal, float fVertical, bool bJump, bool bDash, bool bJumpHold)
 	{
+		if(m_HeroRigidBody.velocity.y < -15)
+			gameObject.layer = LayerMask.NameToLayer("Hero");
+		
 		m_Facing = m_animator.CheckDirection();
 		Flip(this.transform);
 
@@ -15,7 +18,7 @@ public class HeroControllerNoSword : HeroBaseController
 			m_animator.Fall();
 			m_isFalling = true;
 		}
-		else if(IsGrounded())
+		else if(IsGrounded() && gameObject.layer == LayerMask.NameToLayer("Hero"))
 		{
 			m_animator.IsGrounded();
 			m_isFalling = false;
@@ -32,7 +35,7 @@ public class HeroControllerNoSword : HeroBaseController
 			Crouch(fVertical);
 		}
 
-		if(IsWallded() && m_canWallJump)
+		if(!IsGrounded() && IsWallded() && m_canWallJump)
 		{
 
 			if(!m_isOnWall)
@@ -47,6 +50,8 @@ public class HeroControllerNoSword : HeroBaseController
 
 			if(bJump)
 			{
+				gameObject.layer = LayerMask.NameToLayer("HeroJump");
+
 				if(m_Facing == Direction.RIGHT)
 					m_HeroRigidBody.velocity = new Vector2(-15, 16);
 				else
@@ -79,7 +84,7 @@ public class HeroControllerNoSword : HeroBaseController
 
 
 		}
-		else if(!IsWallded() && !m_isDashing && !m_isWallJumping )
+		else if(!m_isDashing && !m_isWallJumping )
 		{
 			if(m_isOnWall)
 			{
@@ -162,6 +167,8 @@ public class HeroControllerNoSword : HeroBaseController
 
 	internal override void Jump()
 	{
+		gameObject.layer = LayerMask.NameToLayer("HeroJump");
+
 		m_animator.Jump();
 
 		m_timer = 0;
