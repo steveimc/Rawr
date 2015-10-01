@@ -30,6 +30,7 @@ public class AnimationActions : MonoBehaviour
 
 	private void ChangeAnimator()
 	{
+		this.transform.rotation = Quaternion.Euler(0,180,0); 
 		m_HeroController.m_animator.ChangeAnimator();
 	}
 }

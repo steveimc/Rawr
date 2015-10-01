@@ -61,20 +61,27 @@ public class AnimationController : MonoBehaviour
 
 	internal HeroBaseController.Direction CheckDirection()
 	{
-		Vector3 heading = transform.position - lastPosition;
+		Vector3 heading = transform.position - lastDirectionPosition;
 		lastDirectionPosition = transform.position;
 
 		// Check the direction of the character and transform it from world space to local
 		Vector3 directionInput = transform.InverseTransformDirection(heading);
 
-		if(directionInput.x < -0.15)
+		if(m_Hero.m_bHasSword)
 		{
-			direction = HeroBaseController.Direction.LEFT;
+			if(directionInput.x < -0.15)
+				direction = HeroBaseController.Direction.LEFT;
+			else if(directionInput.x > 0.15)
+				direction = HeroBaseController.Direction.RIGHT;
 		}
-		else if(directionInput.x > 0.15)
+		else
 		{
-			direction = HeroBaseController.Direction.RIGHT;
+			if(directionInput.x < -0.2)
+				direction = HeroBaseController.Direction.LEFT;
+			else if(directionInput.x > 0.2)
+				direction = HeroBaseController.Direction.RIGHT;
 		}
+
 
 		return direction;
 	}

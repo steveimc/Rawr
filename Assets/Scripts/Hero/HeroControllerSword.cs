@@ -6,7 +6,7 @@ public class HeroControllerSword : HeroBaseController
 	public Rigidbody2D m_FrostNova;
 	internal bool m_isThrowingSword;
 
-	internal override void Move(float fHorizontal, float fVertical, bool bJump, bool bDash)
+	internal override void Move(float fHorizontal, float fVertical, bool bJump, bool bDash, bool bJumpHold)
 	{
 		m_Facing = m_animator.CheckDirection();
 		Flip(this.transform);
@@ -96,7 +96,7 @@ public class HeroControllerSword : HeroBaseController
 			m_isDashing = true;
 			m_LastPos = this.transform.position;
 			m_HeroRigidBody.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-			Dash();
+			Dash(fHorizontal);
 		}
 		else if(m_distance >= m_DashDistance)
 		{
@@ -194,17 +194,4 @@ public class HeroControllerSword : HeroBaseController
 
 	}
 		
-	internal override void Dash()
-	{
-		if(m_Facing == Direction.RIGHT)
-			m_HeroRigidBody.AddForce(new Vector2(m_DashForce,0f));
-		else
-			m_HeroRigidBody.AddForce(new Vector2(-m_DashForce,0f));
-
-		if(!m_isSpinning)
-		{
-			m_animator.Dash();
-			m_UpperCollider.enabled = false;
-		}
-	}
 }

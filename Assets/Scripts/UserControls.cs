@@ -11,6 +11,7 @@ public class UserControls : MonoBehaviour
 	private HeroStatus m_Hero;
 
 	private bool m_bJump;
+	private bool m_bJumpHold;
 	private bool m_bDash;
 	private bool m_bAttack;
 	private bool m_bCharge;
@@ -42,6 +43,8 @@ public class UserControls : MonoBehaviour
 				m_bAttack = Input.GetButtonUp(InputBank.ATTACK+m_Hero.m_iHeroId);
 				m_bCharge = Input.GetButtonDown(InputBank.ATTACK+m_Hero.m_iHeroId);
 			}
+				
+			m_bJumpHold = Input.GetButton(InputBank.JUMP+m_Hero.m_iHeroId);
 
 			if(Input.GetButtonDown(InputBank.SWORD+m_Hero.m_iHeroId))
 			{
@@ -56,7 +59,7 @@ public class UserControls : MonoBehaviour
 
 			fVertical = fVertical * 0.8f;
 
-			m_Controller.Move(fHorizontal, fVertical, m_bJump, m_bDash);
+			m_Controller.Move(fHorizontal, fVertical, m_bJump, m_bDash, m_bJumpHold);
 			m_Controller.Attack(fHorizontal, m_bAttack, m_bCharge);
 
 			m_bJump = false;

@@ -27,6 +27,8 @@ public abstract class HeroBaseController : MonoBehaviour
 	protected float m_timer;
 	protected float m_comboTimer;
 	protected float m_chargeTimer;
+	protected float m_jumpTimer;
+	protected float m_fAcceleration;
 
 	protected float m_distance;
 
@@ -36,16 +38,18 @@ public abstract class HeroBaseController : MonoBehaviour
 	protected bool m_isSpinning;
 	protected bool m_isCharging;
 	protected bool m_isFalling;
+	protected bool m_isJumping;
 
 	protected bool m_canWallJump;
 
 	public enum Direction
 	{
+		NONE,
 		RIGHT,
 		LEFT
 	}
 
-	protected const float CIRCLE_DIAMETER 	= 2.0f;
+	protected const float CIRCLE_DIAMETER 	= 1.5f;
 	protected const float RAY_DISTANCE 		= 1.0f;
 
 	public void Awake()
@@ -133,18 +137,39 @@ public abstract class HeroBaseController : MonoBehaviour
 
 		if(m_Facing == Direction.RIGHT)
 			objectToFlip.localScale = new Vector3(fScale,fScale,fScale);
-		else
+		else if(m_Facing == Direction.LEFT)
 			objectToFlip.localScale = new Vector3(-fScale,fScale,fScale);
 
 	}
 
+	internal virtual void Dash(float fHorizontal)
+	{
+		m_isFalling = false;
 
-	internal abstract void Move(float fHorizontal, float fVertical, bool bJump, bool bDash);
+		if(fHorizontal < -0.1)
+			m_HeroRigidBody.velocity = new Vector2(-m_DashForce,0f);
+		else if(fHorizontal > 0.1)
+			m_HeroRigidBody.velocity = new Vector2(m_DashForce,0f);
+		else
+		{
+			if(m_Facing == Direction.RIGHT)
+				m_HeroRigidBody.velocity = new Vector2(m_DashForce,0f);
+			else if(m_Facing == Direction.LEFT)
+				m_HeroRigidBody.velocity = new Vector2(-m_DashForce,0f);
+		}
+
+		if(!m_isSpinning)
+		{
+			m_animator.Dash();
+			m_UpperCollider.enabled = false;
+		}
+	}
+
+
+	internal abstract void Move(float fHorizontal, float fVertical, bool bJump, bool bDash, bool bJumpHold);
 
 	internal abstract void Jump();
 
 	internal abstract void Attack(float fHorizontal, bool bAttack, bool bCharge);
-
-	internal abstract void Dash();
 
 }
