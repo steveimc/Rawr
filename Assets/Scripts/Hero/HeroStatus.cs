@@ -5,8 +5,15 @@ public class HeroStatus : MonoBehaviour
 {
 	internal int m_iHeroId = 1;
 	internal int m_iHeroHealth;
-	internal int m_iFatigue;
+	internal int m_iHeroEnergy;
+	internal string m_sPlayerName;
+
+	const int MAX_HEALTH = 10;
+	const int MAX_ENERGY = 10;
+
 	GameObject m_goFrostNova;
+
+	//string playerName, int whichHero, int maxHealth, int maxFatigue
 
 	internal bool m_bHasSword = true;
 
@@ -20,10 +27,10 @@ public class HeroStatus : MonoBehaviour
 
 	HeroStatus()
 	{
-		m_iFatigue = 1000;
-		m_iHeroHealth = 1000;
+		m_iHeroHealth = MAX_HEALTH;
+		m_iHeroEnergy = MAX_ENERGY;
 	}
-	
+
 	// Use this for initialization
 	private void Start () 
 	{
@@ -66,7 +73,11 @@ public class HeroStatus : MonoBehaviour
 				this.transform.GetChild((int)GameManager.HeroId.NONE).gameObject.SetActive(false);
 			}
 		}
+
 		this.gameObject.name = "Player" + m_iHeroId;
+
+		m_sPlayerName = gameObject.name;
+		HUDController.instance.InitUIPlayer(m_sPlayerName,m_iHeroId,MAX_HEALTH,MAX_ENERGY);
 	}
 
 	public void DropSword()

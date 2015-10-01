@@ -16,7 +16,7 @@ public class UIPlayer : MonoBehaviour
 		// set img
 		txtUsername.text = playerName;
 		barHealth.Init(maxHealth, maxHealth);
-		barFatigue.Init(maxFatigue, 0);
+		barFatigue.Init(maxFatigue, maxFatigue);
 	}
 
 	public void HasSword(bool hasSword)

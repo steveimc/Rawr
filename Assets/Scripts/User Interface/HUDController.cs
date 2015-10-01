@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HUDController : MonoBehaviour 
+public class HUDController : Singleton<HUDController> 
 {
 	[SerializeField] private UIPlayer playerLeft; // P1
 	[SerializeField] private UIPlayer playerRight; // P2
@@ -25,5 +25,21 @@ public class HUDController : MonoBehaviour
 			hp -=1;
 			playerLeft.UpdateHP(hp);
 		}
+	}
+
+	public void InitUIPlayer(string playerName, int whichHero, int maxHealth, int maxFatigue)
+	{
+		if(whichHero == 1)
+			playerLeft.Init(playerName, whichHero, maxHealth, maxFatigue);
+		else
+			playerRight.Init(playerName, whichHero, maxHealth, maxFatigue);
+	}
+
+	public void UpdateHeroHp(int heroID, int newHP)
+	{
+		if(heroID == 1)
+			playerLeft.UpdateHP(newHP);
+		else
+			playerRight.UpdateHP(newHP);
 	}
 }
