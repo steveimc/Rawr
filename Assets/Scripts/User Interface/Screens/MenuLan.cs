@@ -8,14 +8,14 @@ public class MenuLan : BaseScreen
 
 	void Start()
 	{
-		bool _receiveEvents = false;
+		_receiveEvents = false;
 		hostIPInput.text = "localhost";
 		ScreenManager.instance.Push<KeyboardPopup>().Init(OnKeyboardInputEnd);
 	}
 
 	protected override void OnControllerInput(ControllerEvent controllerInput)
 	{
-		if(_receiveEvents == false)
+		if( _receiveEvents == false)
 			return;
 
 		switch(controllerInput)
@@ -28,7 +28,7 @@ public class MenuLan : BaseScreen
 
 	private void OnKeyboardInputEnd(string hostIp)
 	{
-		bool _receiveEvents = true;
+		_receiveEvents = true;
 		hostIPInput.text = hostIp;
 	}
 

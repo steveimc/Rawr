@@ -6,8 +6,9 @@ public class ControllerButton : Button
 {
 	private Text buttonText;
 
-	void Awake()
+	protected override void Awake()
 	{
+		base.Awake();
 		buttonText = GetComponentInChildren<Text>();
 	}
 

@@ -25,14 +25,13 @@ public class PlayerSyncInput : NetworkBehaviour
 
 	public HeroStatus heroStatus;
 
-	private HeroBaseController myHeroController;
 	private AnimationController heroAnimator;
 	private NetworkClient networkClient;
 	private float latency;
 	private Text latencyText;
-	private float lerpRate = 15.0f;
+//	private float lerpRate = 15.0f;
 
-	private List<UserInput> userInputList = new List<UserInput>() ;
+//	private List<UserInput> userInputList = new List<UserInput>() ;
 
 	// Use this for initialization
 	void Start () 
@@ -40,7 +39,6 @@ public class PlayerSyncInput : NetworkBehaviour
 		if(Game.Instance.IsLocalGame)
 			return;
 
-		myHeroController = GetComponent<HeroBaseController>();
 		heroAnimator 		= GetComponent<AnimationController>();
 		//heroStatus 				= GetComponent<HeroStatus>();
 	}
@@ -65,7 +63,7 @@ public class PlayerSyncInput : NetworkBehaviour
 	{
 		syncUserInput = latestInput;
 
-		ApplyInput(latestInput);
+		ApplyInput(syncUserInput);
 	}
 
 	void ApplyInput(UserInput input)
