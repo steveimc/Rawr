@@ -53,6 +53,8 @@ public class Game : MonoBehaviour
 		}
 	}
 
+	[SerializeField] private string gameScene = "FennirNest_v2";
+
 	public void StartAsLocalGame()
 	{
 		IsLocalGame = true;
@@ -65,7 +67,7 @@ public class Game : MonoBehaviour
 		UnityEngine.Networking.NetworkManager nm = FindObjectOfType<UnityEngine.Networking.NetworkManager>();
 		nm.dontDestroyOnLoad = false;
 		Destroy(nm.gameObject);
-		Application.LoadLevel("FennirNest_v2");
+		Application.LoadLevel(gameScene);
 	}
 
 	public void StartAsSinglePlayer()
