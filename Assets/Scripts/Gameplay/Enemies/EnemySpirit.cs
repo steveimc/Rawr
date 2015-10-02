@@ -19,44 +19,56 @@ public class EnemySpirit : MonoBehaviour
 	private void Start()
 	{
 		m_iHealth = 1;
-		heroes = FindObjectsOfType<HeroStatus>();
 	}
 
 	// Update is called once per frame
 	private void Update () 
 	{
 		if(heroes == null)
-			return;
-
-		LookForTarget();
-
-
-		if(target)
 		{
-			direction = target.transform.position - transform.position;
-			direction.Normalize();
-
-			rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-			transform.rotation = Quaternion.Euler(0f, 0f, rotZ - 90);
-
-			if(Vector2.Distance(target.transform.position,this.transform.position) > MIN_DISTANCE)
-			{
-				transform.position += transform.up*MAX_SPEED*Time.deltaTime;
-			}
+			heroes = FindObjectsOfType<HeroStatus>();
 		}
 
-		if(m_iHealth <= 0)
-			Destroy(this.gameObject);
+		if(heroes != null)
+		{
+			LookForTarget();
+
+
+			if(target)
+			{
+				direction = target.transform.position - transform.position;
+				direction.Normalize();
+
+				rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+				Quaternion rotation = Quaternion.Euler(0f, 0f, rotZ - 90);
+
+				transform.rotation = Quaternion.Slerp(this.transform.rotation,rotation,0.1f);
+
+				if(Vector2.Distance(target.transform.position,this.transform.position) > MIN_DISTANCE)
+				{
+					transform.position += transform.up*MAX_SPEED*Time.deltaTime;
+				}
+			}
+
+			if(m_iHealth <= 0)
+				Destroy(this.gameObject);
+		}
 	}
+
 
 	private void LookForTarget()
 	{
-		float distance = 0xffffff;
-
 		foreach(HeroStatus hero in heroes)
 		{
-			if(Vector2.Distance(hero.transform.position,this.transform.position) < distance)
+			if(target == null)
+			{
 				target = hero.transform;
+			}
+
+			if(Vector2.Distance(transform.position,hero.transform.position) < Vector2.Distance(transform.position,target.transform.position))
+			{
+				target = hero.transform;
+			}
 		}
 	}
 
