@@ -60,19 +60,25 @@ public class EnemySpirit : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D col)
+	private void OnTriggerEnter2D(Collider2D col2D)
 	{
-		if(col.gameObject.GetComponent<HeroStatus>())
+		if(col2D.gameObject.GetComponent<HeroStatus>())
 		{
 			this.GetComponent<Collider2D>().enabled = false;
 			Invoke("EnableCollider", TIME_LIMIT);
-			HeroStatus player = col.gameObject.GetComponent<HeroStatus>();
-			HUDController.instance.UpdateHeroHp(player.m_iHeroId,player.m_iHeroHealth--);
+			HeroStatus player = col2D.gameObject.GetComponent<HeroStatus>();
+			player.m_iHeroHealth--;
+			HUDController.instance.UpdateHeroHp(player.m_iHeroId,player.m_iHeroHealth);
 		}
 	}
 
 	private void EnableCollider()
 	{
 		this.GetComponent<Collider2D>().enabled = true;
+	}
+
+	internal void SetDamage(int iDamage)
+	{
+		m_iHealth += iDamage;
 	}
 }

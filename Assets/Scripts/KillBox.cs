@@ -12,5 +12,9 @@ public class KillBox : MonoBehaviour
 		{
 			col2D.transform.position = spawnPoint.position;
 		}
+		else if(col2D.gameObject.GetComponent<EnemyFireBall>() != null)
+		{
+			Destroy(col2D.gameObject);
+		}
 	}
 }
