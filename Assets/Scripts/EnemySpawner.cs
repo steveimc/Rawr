@@ -19,9 +19,8 @@ public class EnemySpawner : MonoBehaviour
 	}
 
 	void SpawnEnemy()
-	{
+	{/*
 		if(GameManager.Instance.spawner)
-		{
-		}
+		{*/
 	}
 }

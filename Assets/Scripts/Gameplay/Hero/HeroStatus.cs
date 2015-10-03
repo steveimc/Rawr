@@ -45,7 +45,7 @@ public class HeroStatus : MonoBehaviour
 				if (m_iHeroId ==1)
 					FindObjectOfType<CameraController>().Init(this.transform);
 
-			if(m_iHeroId == (int)GameManager.HeroId.PLAYER1)
+			if(m_iHeroId == (int)HeroId.PLAYER1)
 			{
 				this.transform.GetChild(m_iHeroId).gameObject.SetActive(false);
 				m_bHasSword = true;
@@ -53,7 +53,7 @@ public class HeroStatus : MonoBehaviour
 			}
 			else
 			{
-				this.transform.GetChild((int)GameManager.HeroId.NONE).gameObject.SetActive(false);
+				this.transform.GetChild((int)HeroId.NONE).gameObject.SetActive(false);
 				m_bHasSword = true;
 				ToggleSword();
 			}
@@ -70,7 +70,7 @@ public class HeroStatus : MonoBehaviour
 			else
 			{
 				m_iHeroId = 2;
-				this.transform.GetChild((int)GameManager.HeroId.NONE).gameObject.SetActive(false);
+				this.transform.GetChild((int)HeroId.NONE).gameObject.SetActive(false);
 			}
 		}
 
@@ -136,7 +136,7 @@ public class HeroStatus : MonoBehaviour
 
 	private int GetOtherPlayerId()
 	{
-		if(m_iHeroId == (int)GameManager.HeroId.PLAYER1)
+		if(m_iHeroId == (int)HeroId.PLAYER1)
 			return 1;
 		else
 			return 0;

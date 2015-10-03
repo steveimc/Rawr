@@ -15,10 +15,10 @@ public class Stage : MonoBehaviour
 		m_stageClearedCallback = stageClearedCallback;
 	}
 
-	public void Init(int stageNumber, int essencesToPass )
+	public void Init(int stageNumber)
 	{
 		m_iStageNumber 		= stageNumber;
-		m_iEssencesToPass 	= essencesToPass;
+		//m_iEssencesToPass 	= essencesToPass;
 	}
 
 	private void StageCleared()
@@ -33,7 +33,8 @@ public class Stage : MonoBehaviour
 
 	public int EssencesForStageMultiplier(int stage)
 	{
-
+		//int 
+		return 0;
 	}
 	
 }
