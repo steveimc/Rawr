@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum HeroId
+{
+	NONE,
+	PLAYER1,
+	PLAYER2
+}
+
 public class GameManager : MonoBehaviour 
 {
 	[SerializeField] GameObject spawnPoint;
@@ -8,17 +15,10 @@ public class GameManager : MonoBehaviour
 
 	internal HeroStatus[] player = new HeroStatus[2];
 	public GameObject m_FrostNovaCopy;
-
+	private Stage m_Stage;	
 	private int playerCount = 0;
-
-	public enum HeroId
-	{
-		NONE,
-		PLAYER1,
-		PLAYER2
-	}
-
-	private HeroId id;
+	private int m_iCurrentEssences = 0;
+	private int m_iEnemiesOnScreen = 0;
 
 	public static GameManager Instance { get; private set; }
 	
@@ -28,8 +28,6 @@ public class GameManager : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
-
-		id = HeroId.NONE;
 		Instance = this;
 		DontDestroyOnLoad(gameObject);
 	}
@@ -39,7 +37,24 @@ public class GameManager : MonoBehaviour
 		if(Game.Instance.IsLocalGame)
 		{
 			InstantiatePlayers();
+			m_Stage = new Stage(OnStageCompleted);
 		}
+	}
+
+	private void InitStage(int stage)
+	{
+		m_Stage.Init(stage);
+	}
+
+	private void OnStageCompleted(int stage)
+	{
+		InitStage(stage++);
+	}
+
+	public void OnEssenceCaptured()
+	{
+		m_iCurrentEssences++;
+		m_Stage.UpdateEssences(m_iCurrentEssences);
 	}
 
 	private void InstantiatePlayers()
@@ -57,33 +72,7 @@ public class GameManager : MonoBehaviour
 		playerCount ++;
 		return playerCount;
 	}
-
-	public int AssignPlayerId(string sPlayerName = "")
-	{
-		switch(sPlayerName)
-		{
-			case "Player1":
-				id = HeroId.PLAYER1;
-				return (int)id;
-
-			case "Player2":
-				id = HeroId.PLAYER2;
-				return (int)id;
-
-			default:
-				if(id == HeroId.NONE)
-				{
-					id = HeroId.PLAYER1;
-					return (int)id;
-				}
-				else
-				{
-					id = HeroId.PLAYER2;
-					return (int)id;
-				}
-		}
-	}
-
+	
 	void OnLevelWasLoaded(int level) 
 	{
 		if(level == 0)
