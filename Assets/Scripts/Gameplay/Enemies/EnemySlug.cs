@@ -17,6 +17,7 @@ public class EnemySlug : MonoBehaviour
 			HeroStatus player = col2D.gameObject.GetComponent<HeroStatus>();
 			player.m_iHeroHealth--;
 			HUDController.instance.UpdateHeroHp(player.m_iHeroId,player.m_iHeroHealth);
+			GameManager.Instance.m_iEnemiesOnScreen--;
 			Destroy(this.gameObject);
 		}
 	}

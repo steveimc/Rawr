@@ -3,14 +3,6 @@ using System.Collections;
 
 public class EnemyDragon : MonoBehaviour 
 {
-
-	public enum Direction
-	{
-		LEFT,
-		RIGHT
-	}
-
-	internal Direction m_Facing;
 	private int m_iHealth;
 	private float m_fShootingTimer;
 
@@ -24,14 +16,16 @@ public class EnemyDragon : MonoBehaviour
 	private void Start()
 	{
 		m_iHealth = 1;
-		m_Facing = Direction.RIGHT;
 	}
 
 	// Update is called once per frame
 	private void Update () 
 	{
 		if(m_iHealth <= 0)
+		{
 			Destroy(this.gameObject);
+			GameManager.Instance.m_iEnemiesOnScreen--;
+		}
 
 		m_fShootingTimer += Time.deltaTime;
 
@@ -48,14 +42,8 @@ public class EnemyDragon : MonoBehaviour
 		Rigidbody2D fireBall;
 		fireBall = Instantiate(m_FireBall, transform.position, transform.rotation) as Rigidbody2D;
 
-		if(m_Facing == Direction.RIGHT)
-		{
-			fireBall.velocity = new Vector2(Random.Range(MIN_FORCE,MAX_FORCE),Random.Range(MIN_FORCE,MAX_FORCE));
-		}
-		else if(m_Facing == Direction.LEFT)
-		{
-			fireBall.velocity = new Vector2(-Random.Range(MIN_FORCE,MAX_FORCE),Random.Range(MIN_FORCE,MAX_FORCE));;
-		}
+		fireBall.velocity = new Vector2(transform.right.x * Random.Range(MIN_FORCE,MAX_FORCE),Random.Range(MIN_FORCE,MAX_FORCE));
+
 	}
 
 	private void OnTriggerEnter2D(Collider2D col2D)
@@ -73,17 +61,6 @@ public class EnemyDragon : MonoBehaviour
 	private void EnableCollider()
 	{
 		this.GetComponent<Collider2D>().enabled = true;
-	}
-
-	internal virtual void Flip(Transform objectToFlip)
-	{
-		float fScale = objectToFlip.localScale.y;
-
-		if(m_Facing == Direction.RIGHT)
-			objectToFlip.localScale = new Vector3(fScale,fScale,fScale);
-		else if(m_Facing == Direction.LEFT)
-			objectToFlip.localScale = new Vector3(-fScale,fScale,fScale);
-
 	}
 
 	internal void SetDamage(int iDamage)

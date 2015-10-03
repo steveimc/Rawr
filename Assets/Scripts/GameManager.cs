@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 	private Stage m_Stage;	
 	private int playerCount = 0;
 	private int m_iCurrentEssences = 0;
-	private int m_iEnemiesOnScreen = 0;
+	internal int m_iEnemiesOnScreen = 0;
 
 	public static GameManager Instance { get; private set; }
 	

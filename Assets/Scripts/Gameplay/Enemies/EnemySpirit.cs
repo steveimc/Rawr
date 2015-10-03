@@ -51,7 +51,10 @@ public class EnemySpirit : MonoBehaviour
 			}
 
 			if(m_iHealth <= 0)
+			{
 				Destroy(this.gameObject);
+				GameManager.Instance.m_iEnemiesOnScreen--;
+			}
 		}
 	}
 
