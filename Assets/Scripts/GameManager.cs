@@ -38,17 +38,13 @@ public class GameManager : MonoBehaviour
 		{
 			InstantiatePlayers();
 			m_Stage = new Stage(OnStageCompleted);
+			m_Stage.Init(0);
 		}
 	}
-
-	private void InitStage(int stage)
-	{
-		m_Stage.Init(stage);
-	}
-
+	
 	private void OnStageCompleted(int stage)
 	{
-		InitStage(stage++);
+		m_Stage.Init(stage++);
 	}
 
 	public void OnEssenceCaptured()

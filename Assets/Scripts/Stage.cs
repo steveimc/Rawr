@@ -30,5 +30,10 @@ public class Stage : MonoBehaviour
 	{
 		m_iCurrentEssences = currentEssences;
 	}
+
+	public int EssencesForStageMultiplier(int stage)
+	{
+
+	}
 	
 }
