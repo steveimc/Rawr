@@ -55,10 +55,11 @@ public class ScreenKeyboard : MonoBehaviour
 
 	private Action<string> doneCallback;
 
-	public void Init (Action<string> callback = null) 
+	public void Init (String hint, Action<string> callback = null) 
 	{
 		doneCallback = callback;
 
+		_textField.text = hint;
 		_alphaButtons = _alphaButtonsPanel.GetComponentsInChildren<ControllerButton>();
 		ChangeMode(KeyboardMode.Uppercase);
 		//_swapButton.GetComponentInChildren<Text>().text = KeyboardMode.Uppercase.ToString().ToUpper();

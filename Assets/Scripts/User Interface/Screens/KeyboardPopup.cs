@@ -4,9 +4,9 @@ using System;
 
 public class KeyboardPopup : BaseScreen 
 {
-	public void Init(Action<string> keyboardCallback)
+	public void Init(String hint, Action<string> keyboardCallback)
 	{
-		GetComponentInChildren<ScreenKeyboard>().Init(keyboardCallback);
+		GetComponentInChildren<ScreenKeyboard>().Init(hint, keyboardCallback);
 	}
 
 	protected override void OnControllerInput(ControllerEvent controllerInput)
