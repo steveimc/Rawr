@@ -37,18 +37,12 @@ public class EnemySpawner : MonoBehaviour
 		spawner.iEnemyTypes = iEnemyTypes;
 	}
 
-	void Start()
-	{
-		spawner.iMaxEnemies = 10;
-		spawner.iEnemyTypes = 4;
-	}
-
 	void Update()
 	{
 		interval += Time.deltaTime;
 		if(GameManager.Instance.m_iEnemiesOnScreen < spawner.iMaxEnemies)
 		{
-			if(interval > 3) //TODO: Make random
+			if(interval > Random.Range(1,5)) //TODO: Make random
 			{
 				SpawnEnemy();
 				interval = 0;
