@@ -23,7 +23,7 @@ public class HeroStatus : MonoBehaviour
 
 	internal HeroBaseController m_Controller;
 
-	private GameObject[] playerObject = new GameObject[sizeof(HeroId)];
+//	private GameObject[] playerObject = new GameObject[sizeof(HeroId)];
 
 	HeroStatus()
 	{

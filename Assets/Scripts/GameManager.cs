@@ -13,12 +13,16 @@ public class GameManager : MonoBehaviour
 	[SerializeField] GameObject spawnPoint;
 	[SerializeField] GameObject playerPrefab;
 
-	internal HeroStatus[] player = new HeroStatus[2];
-	public GameObject m_FrostNovaCopy;
-	private Stage m_Stage;	
-	private int playerCount = 0;
-	private int m_iCurrentEssences = 0;
-	internal int m_iEnemiesOnScreen = 0;
+	internal 	HeroStatus[] player = new HeroStatus[2];
+	public 		GameObject m_FrostNovaCopy;
+
+	private 	Stage m_Stage;	
+	private 	EnemySpawner m_EnemySpawner;
+
+	private 	int playerCount = 0;
+	private 	int m_iCurrentEssences = 0;
+	internal	int m_iEnemiesOnScreen = 0;
+	private	 	int m_iNumOfStages = 5;
 
 	public static GameManager Instance { get; private set; }
 	
@@ -37,14 +41,23 @@ public class GameManager : MonoBehaviour
 		if(Game.Instance.IsLocalGame)
 		{
 			InstantiatePlayers();
+		
 			m_Stage = new Stage(OnStageCompleted);
 			m_Stage.Init(0);
+
+			m_EnemySpawner = GetComponent<EnemySpawner>();
+			m_EnemySpawner.InitSpawner(m_Stage.GetCurrentStage(), MaxEnemiesOnScreen(m_Stage.GetCurrentStage()), m_Stage.GetEnemyTypes());
 		}
 	}
-	
+
 	private void OnStageCompleted(int stage)
 	{
-		m_Stage.Init(stage++);
+		if(stage + 1 < m_iNumOfStages)
+		{
+			m_Stage.Init(stage++);
+			m_EnemySpawner.InitSpawner(m_Stage.GetCurrentStage(), MaxEnemiesOnScreen(m_Stage.GetCurrentStage()), m_Stage.GetEnemyTypes());
+		}
+		// TODO: Else -> Boss fight
 	}
 
 	public void OnEssenceCaptured()
@@ -77,4 +90,11 @@ public class GameManager : MonoBehaviour
 			Destroy(this.gameObject);
 		}
 	}
+
+	private int MaxEnemiesOnScreen(int stage)
+	{
+		int maxEnemies =  (stage +1) * 2;
+		return maxEnemies;
+	}
+
 }

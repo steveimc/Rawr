@@ -2,11 +2,13 @@
 using System.Collections;
 using System;
 
-public class Stage : MonoBehaviour 
+public class Stage
 {
 	private int m_iStageNumber;
 	private int m_iEssencesToPass;
 	private int m_iCurrentEssences = 0;
+
+	private int m_enemyTypes = 0;
 
 	private Action<int> m_stageClearedCallback;
 
@@ -15,11 +17,22 @@ public class Stage : MonoBehaviour
 		m_stageClearedCallback = stageClearedCallback;
 	}
 
+	public int GetCurrentStage()
+	{
+		return m_iStageNumber;
+	}
+
+	public int GetEnemyTypes()
+	{
+		return m_enemyTypes;
+	}
+
 	public void Init(int stageNumber)
 	{
 		m_iStageNumber 	= stageNumber;
 		m_iEssencesToPass 	= EssencesForStageMultiplier(m_iStageNumber);
-		// Set max num of enemies on game manager
+		if(m_iStageNumber < 3)
+			m_enemyTypes = m_iStageNumber +1;
 	}
 
 	private void StageCleared()
@@ -46,12 +59,6 @@ public class Stage : MonoBehaviour
 		// 3 -> (3+2) * (3+1) = 20 = 30 
 		// 4 -> (4+2) * (4+1) = 30 = 45
 		return numOfEssences;
-	}
-
-	private int MaxEnemiesOnScreen(int stage)
-	{
-		int maxEnemies = (stage+1) * 2;
-		return maxEnemies;
 	}
 	
 }
