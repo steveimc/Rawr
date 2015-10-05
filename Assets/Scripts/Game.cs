@@ -53,7 +53,7 @@ public class Game : MonoBehaviour
 		}
 	}
 
-	[SerializeField] private string gameScene = "FennirNest_v2";
+	private string gameScene = "Loading";
 
 	public void StartAsLocalGame()
 	{
