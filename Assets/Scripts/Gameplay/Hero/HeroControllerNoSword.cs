@@ -149,7 +149,7 @@ public class HeroControllerNoSword : HeroBaseController
 
 		if(m_isJumping)
 		{
-			m_jumpTimer += Time.fixedDeltaTime;
+			m_jumpTimer += Time.deltaTime;
 
 			if(bJumpHold)
 			{
