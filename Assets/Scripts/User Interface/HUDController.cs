@@ -6,6 +6,8 @@ public class HUDController : Singleton<HUDController>
 	[SerializeField] private UIPlayer playerLeft; // P1
 	[SerializeField] private UIPlayer playerRight; // P2
 
+	[SerializeField] private StageBanners stageBanner;
+
 	int hp = 10;
 
 	void Start()
@@ -41,5 +43,11 @@ public class HUDController : Singleton<HUDController>
 			playerLeft.UpdateHP(newHP);
 		else
 			playerRight.UpdateHP(newHP);
+	}
+
+	public void ShowStageBanner(int nextStage)
+	{
+		// Stages go from 0 to 1,  banners go from 1 to 6
+		stageBanner.ShowBanner(nextStage + 1);
 	}
 }

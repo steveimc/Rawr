@@ -30,6 +30,7 @@ public class Stage
 	public void Init(int stageNumber)
 	{
 		m_iStageNumber 	= stageNumber;
+		HUDController.instance.ShowStageBanner(m_iStageNumber);
 		m_iEssencesToPass 	= EssencesForStageMultiplier(m_iStageNumber);
 		if(m_iStageNumber < 3)
 			m_enemyTypes = m_iStageNumber +1;

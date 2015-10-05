@@ -54,10 +54,13 @@ public class GameManager : MonoBehaviour
 	{
 		if(stage + 1 < m_iNumOfStages)
 		{
-			m_Stage.Init(stage++);
+			m_Stage.Init(stage + 1);
 			m_EnemySpawner.InitSpawner(m_Stage.GetCurrentStage(), MaxEnemiesOnScreen(m_Stage.GetCurrentStage()), m_Stage.GetEnemyTypes());
 		}
-		// TODO: Else -> Boss fight
+		{
+			// TODO: Else -> Boss fight
+		}
+
 	}
 
 	public void OnEssenceCaptured()

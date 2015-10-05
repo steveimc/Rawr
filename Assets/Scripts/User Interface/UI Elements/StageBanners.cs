@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StageBanners : MonoBehaviour 
 {
-	[SerializeField] private Animator m_BannersAnimator;
+	private Animator m_BannersAnimator;
 
 	private const string TRIGGER_STAGE_1 = "Stage_1";
 	private const string TRIGGER_STAGE_2 = "Stage_2";
@@ -11,6 +11,11 @@ public class StageBanners : MonoBehaviour
 	private const string TRIGGER_STAGE_4 = "Stage_4";
 	private const string TRIGGER_STAGE_5 = "Stage_5";
 	private const string TRIGGER_STAGE_FINAL = "Stage_6";
+
+	private void Awake()
+	{
+		m_BannersAnimator = GetComponent<Animator>();
+	}
 
 	public void ShowBanner( int stage )
 	{
