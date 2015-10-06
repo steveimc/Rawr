@@ -43,11 +43,11 @@ public class Portal : MonoBehaviour
 
 			if(m_linkedPortal)
 			{
-				m_linkedPortal.GetComponent<Renderer>().enabled = false;
+				m_linkedPortal.GetComponentInChildren<ParticleSystem>().Play();
 				m_linkedPortal.m_HeroCanTeleport = false;
 			}
-			m_Portals[iRandom].GetComponent<Renderer>().enabled = true;
-			this.GetComponent<Renderer>().enabled = true;
+			m_Portals[iRandom].GetComponentInChildren<ParticleSystem>().Play();
+			this.GetComponentInChildren<ParticleSystem>().Play();
 
 			m_HeroCanTeleport = true;
 			m_Portals[iRandom].m_HeroCanTeleport = true;
@@ -65,11 +65,11 @@ public class Portal : MonoBehaviour
 
 	private void DisablePortals()
 	{
-		m_linkedPortal.GetComponent<Renderer>().enabled = false;
+		m_linkedPortal.GetComponentInChildren<ParticleSystem>().Stop();
 		m_linkedPortal.m_HeroCanTeleport = false;
 
 		m_linkedPortal.m_linkedPortal.m_HeroCanTeleport = false;
-		m_linkedPortal.m_linkedPortal.GetComponent<Renderer>().enabled = false;
+		m_linkedPortal.m_linkedPortal.GetComponentInChildren<ParticleSystem>().Stop();
 	}
 
 	private void OnTriggerExit2D(Collider2D col2D)

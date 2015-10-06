@@ -47,16 +47,37 @@ public class AnimationActions : MonoBehaviour
 	private void ToggleHitZone(int iStatus)
 	{
 		if(iStatus == 0)
+		{
 			hitZoneCollider.enabled = false;
+		}
 		else
+		{
 			hitZoneCollider.enabled = true;
+			hitZoneCollider.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+		}
 	}
 
 	internal void ToggleSpinZone(int iStatus)
 	{
+		ParticleSystem[] particles;
+		particles = spinZoneCollider.gameObject.GetComponentsInChildren<ParticleSystem>();
 		if(iStatus == 0)
+		{
 			spinZoneCollider.enabled = false;
+
+			foreach(ParticleSystem p in particles)
+			{
+				p.Stop();
+			}
+		
+		}
 		else
+		{
 			spinZoneCollider.enabled = true;
+			foreach(ParticleSystem p in particles)
+			{
+				p.Play();
+			}
+		}
 	}
 }
