@@ -8,14 +8,14 @@ public class HeroStatus : MonoBehaviour
 	internal int m_iHeroEnergy;
 	internal string m_sPlayerName;
 
-	const int MAX_HEALTH = 10;
+	const int MAX_HEALTH = 5;
 	const int MAX_ENERGY = 10;
 
 	GameObject m_goFrostNova;
 
 	//string playerName, int whichHero, int maxHealth, int maxFatigue
 
-	internal bool m_bHasSword = true;
+	private bool m_bHasSword = true;
 
 	private GameObject m_FrostNova;
 
@@ -123,6 +123,7 @@ public class HeroStatus : MonoBehaviour
 			m_FrostNova = GetComponentInChildren<FrostNova>().gameObject;
 		}
 		m_FrostNova.SetActive(m_bHasSword);
+		HUDController.instance.UpdateHasSword(m_iHeroId, m_bHasSword);
 
 		// This shouldnt happen in remote cuz it checks isLocalplayer before sending
 		if(syncInput != null)
@@ -179,6 +180,11 @@ public class HeroStatus : MonoBehaviour
 			m_Controller = GetComponent<HeroControllerSword>();
 		else
 			m_Controller = GetComponent<HeroControllerNoSword>();
+	}
+
+	public bool GetHasSword()
+	{
+		return m_bHasSword;
 	}
 }
 

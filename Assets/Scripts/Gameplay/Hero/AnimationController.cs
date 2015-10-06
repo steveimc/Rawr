@@ -67,7 +67,7 @@ public class AnimationController : MonoBehaviour
 		// Check the direction of the character and transform it from world space to local
 		Vector3 directionInput = transform.InverseTransformDirection(heading);
 
-		if(m_Hero.m_bHasSword)
+		if(m_Hero.GetHasSword())
 		{
 			if(directionInput.x < -0.15)
 				direction = HeroBaseController.Direction.LEFT;
@@ -91,7 +91,7 @@ public class AnimationController : MonoBehaviour
 		if(animator == null)
 			return;
 
-		if(m_Hero.m_bHasSword)
+		if(m_Hero.GetHasSword())
 			animator.runtimeAnimatorController = Resources.Load("Hero_Sword") as RuntimeAnimatorController;
 		else
 			animator.runtimeAnimatorController = Resources.Load("Hero_NoSword") as RuntimeAnimatorController;
