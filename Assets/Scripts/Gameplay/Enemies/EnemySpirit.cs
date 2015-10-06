@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemySpirit : MonoBehaviour 
+public class EnemySpirit : Enemy 
 {
 	HeroStatus[] heroes;
 	Transform target;
 	Vector3 direction;
-
-	int m_iHealth;
 
 	float rotZ;
 

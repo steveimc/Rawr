@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyDragon : MonoBehaviour 
+public class EnemyDragon : Enemy 
 {
-	private int m_iHealth;
 	private float m_fShootingTimer;
 
 	[SerializeField] Rigidbody2D m_FireBall;
@@ -61,10 +60,5 @@ public class EnemyDragon : MonoBehaviour
 	private void EnableCollider()
 	{
 		this.GetComponent<Collider2D>().enabled = true;
-	}
-
-	internal void SetDamage(int iDamage)
-	{
-		m_iHealth += iDamage;
 	}
 }

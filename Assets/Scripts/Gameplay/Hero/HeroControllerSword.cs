@@ -146,6 +146,7 @@ public class HeroControllerSword : HeroBaseController
 			this.transform.Rotate(new Vector3(0,30,0));
 			if(m_chargeTimer > 3)
 			{
+				this.GetComponentInChildren<AnimationActions>().ToggleSpinZone(0);
 				m_isSpinning = false;
 				this.transform.rotation = Quaternion.identity;
 			}
@@ -159,6 +160,7 @@ public class HeroControllerSword : HeroBaseController
 
 		if(m_chargeTimer > 2 && !m_isSpinning && m_AttackType == 0 && m_isCharging)
 		{
+			this.GetComponentInChildren<AnimationActions>().ToggleSpinZone(1);
 			m_animator.Spin();
 			m_chargeTimer = 0;
 			m_isSpinning = true;

@@ -14,8 +14,9 @@ public class EnemySpawner : MonoBehaviour
 	{
 		NONE,
 		SPIRIT,
-		DRAGON,
-		SLUG
+		SLUG,
+		DRAGON
+
 	}
 
 	[SerializeField] EnemySpirit 	spirit;
@@ -52,7 +53,7 @@ public class EnemySpawner : MonoBehaviour
 
 	void SpawnEnemy()
 	{
-		int type = Random.Range(1,spawner.iEnemyTypes);
+		int type = Random.Range(1,spawner.iEnemyTypes+1);
 
 		if(GameManager.Instance.m_iEnemiesOnScreen < spawner.iMaxEnemies)
 		{

@@ -5,6 +5,16 @@ public class AnimationActions : MonoBehaviour
 {
 	[SerializeField] HeroControllerSword m_HeroController;
 
+	Collider2D hitZoneCollider;
+
+	Collider2D spinZoneCollider;
+
+	private void Start()
+	{
+		hitZoneCollider = transform.parent.GetComponentInChildren<HitZone>().gameObject.GetComponent<Collider2D>();
+		spinZoneCollider = transform.parent.GetComponentInChildren<SpinZone>().gameObject.GetComponent<Collider2D>();
+	}
+
 	private void ThrowSword()
 	{
 		m_HeroController.m_isThrowingSword = false;
@@ -32,5 +42,21 @@ public class AnimationActions : MonoBehaviour
 	{
 		this.transform.rotation = Quaternion.Euler(0,180,0); 
 		m_HeroController.m_animator.ChangeAnimator();
+	}
+
+	private void ToggleHitZone(int iStatus)
+	{
+		if(iStatus == 0)
+			hitZoneCollider.enabled = false;
+		else
+			hitZoneCollider.enabled = true;
+	}
+
+	internal void ToggleSpinZone(int iStatus)
+	{
+		if(iStatus == 0)
+			spinZoneCollider.enabled = false;
+		else
+			spinZoneCollider.enabled = true;
 	}
 }

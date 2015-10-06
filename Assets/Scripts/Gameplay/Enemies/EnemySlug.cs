@@ -1,13 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemySlug : MonoBehaviour 
+public class EnemySlug : Enemy 
 {
 	const float MAX_SPEED = 3.0f;
 	// Update is called once per frame
+
+	void Start()
+	{
+		m_iHealth = 1;
+	}
+
 	void Update () 
 	{
 		transform.position += transform.right*MAX_SPEED*Time.deltaTime;
+
+		if(m_iHealth <= 0)
+		{
+			Destroy(this.gameObject);
+			GameManager.Instance.m_iEnemiesOnScreen--;
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D col2D)
