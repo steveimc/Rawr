@@ -10,8 +10,7 @@ public class EnemyFireBall : MonoBehaviour
 		{
 			this.GetComponent<Collider2D>().enabled = false;
 			HeroStatus player = col2D.gameObject.GetComponent<HeroStatus>();
-			player.m_iHeroHealth--;
-			HUDController.instance.UpdateHeroHp(player.m_iHeroId,player.m_iHeroHealth);
+			player.TakeDamage(1);
 			Destroy(this.gameObject);
 		}
 	}

@@ -160,26 +160,27 @@ public class HeroStatus : MonoBehaviour
 
 	public void TakeDamage(int dmg)
 	{
-		CancelInvoke();
 		m_iHeroHealth -= dmg;
+		HUDController.instance.UpdateHeroHp(m_iHeroId, m_iHeroHealth);
 
 		if(m_iHeroHealth > 0)
 		{
-			Material material = new Material(Shader.Find("Unlit/HeroShaderAnimated"));
-
 			foreach(Renderer r in renderers)
 			{
-				r.material = material;
+				r.material.shader = Shader.Find("Unlit/HeroShaderAnimated");
 			}
 
 			Invoke("ReturnToNormalShader", 2.0f);
 		}
 		else if(m_iHeroHealth <= 0)
 		{
-			DropSword();
-			ChangeHeroController();
+			if(m_bHasSword)
+			{
+				DropSword();
+				ChangeHeroController();
+			}
 
-			this.GetComponent<Renderer>().enabled = false;
+			Die ();
 
 			if(players.Length > 1)
 			{
@@ -209,11 +210,9 @@ public class HeroStatus : MonoBehaviour
 
 	private void ReturnToNormalShader()
 	{
-		Material material = new Material(Shader.Find("Unlit/HeroShader"));
-
 		foreach(Renderer r in renderers)
 		{
-			r.material = material;
+			r.material.shader = Shader.Find("Unlit/HeroShader");
 		}
 	}
 	
@@ -249,7 +248,18 @@ public class HeroStatus : MonoBehaviour
 	public void RestoreHeroHealth()
 	{
 		m_iHeroHealth = MAX_HEALTH;
-		this.GetComponent<Renderer>().enabled = true;
+		foreach(Renderer r in renderers)
+		{
+			r.enabled = true;
+		}
+	}
+
+	private void Die()
+	{
+		foreach(Renderer r in renderers)
+		{
+			r.enabled = false;
+		}
 	}
 }
 

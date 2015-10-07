@@ -59,14 +59,15 @@ public class EnemySpirit : Enemy
 	{
 		foreach(HeroStatus hero in heroes)
 		{
-			if(target == null)
+			if(target == null && hero.GetHealth() > 0)
 			{
 				target = hero.transform;
 			}
 
-			if(Vector2.Distance(transform.position,hero.transform.position) < Vector2.Distance(transform.position,target.transform.position))
+			if(target != null && Vector2.Distance(transform.position,hero.transform.position) < Vector2.Distance(transform.position,target.transform.position))
 			{
-				target = hero.transform;
+				if(hero.GetHealth() >0)
+					target = hero.transform;
 			}
 		}
 	}
@@ -78,8 +79,10 @@ public class EnemySpirit : Enemy
 			this.GetComponent<Collider2D>().enabled = false;
 			Invoke("EnableCollider", TIME_LIMIT);
 			HeroStatus player = col2D.gameObject.GetComponent<HeroStatus>();
-			player.m_iHeroHealth--;
-			HUDController.instance.UpdateHeroHp(player.m_iHeroId,player.m_iHeroHealth);
+			player.TakeDamage(1);
+
+			if(player.GetHealth() <= 0)
+				target = null;
 		}
 	}
 

@@ -51,8 +51,7 @@ public class EnemyDragon : Enemy
 			this.GetComponent<Collider2D>().enabled = false;
 			Invoke("EnableCollider", TIME_LIMIT);
 			HeroStatus player = col2D.gameObject.GetComponent<HeroStatus>();
-			player.m_iHeroHealth--;
-			HUDController.instance.UpdateHeroHp(player.m_iHeroId,player.m_iHeroHealth);
+			player.TakeDamage(1);
 		}
 	}
 

@@ -27,8 +27,7 @@ public class EnemySlug : Enemy
 		if(col2D.gameObject.GetComponent<HeroStatus>())
 		{
 			HeroStatus player = col2D.gameObject.GetComponent<HeroStatus>();
-			player.m_iHeroHealth--;
-			HUDController.instance.UpdateHeroHp(player.m_iHeroId,player.m_iHeroHealth);
+			player.TakeDamage(1);
 			GameManager.Instance.m_iEnemiesOnScreen--;
 			Destroy(this.gameObject);
 		}
