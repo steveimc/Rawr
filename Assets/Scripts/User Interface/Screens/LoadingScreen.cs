@@ -22,11 +22,9 @@ public class LoadingScreen : MonoBehaviour
 		while (!async.isDone)
 		{
 			//int progress=(int)((float)((float)maxWidth/100)*((int)(async.progress*100)));
-			//Debug.Log(async.progress);
 			progress.UpdateValue((int)(async.progress * 100) );
 			if( async.progress >= 0.9f)
 			{
-				Debug.Log("here");
 				progress.UpdateValue(100);
 				yield return new WaitForSeconds(2.0f);
 				async.allowSceneActivation = true;

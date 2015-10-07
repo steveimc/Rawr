@@ -8,9 +8,12 @@ public class UIHealthPoints : MonoBehaviour
 	[SerializeField] Sprite spr_LifeTrue;
 	[SerializeField] Sprite spr_LifeFalse;
 
+	private void Awake()
+	{
+		//m_imgHpArray = GetComponentsInChildren<Image>();	
+	}
 	private void Start()
 	{
-		m_imgHpArray = GetComponentsInChildren<Image>();
 		for(int i = 0; i < m_imgHpArray.Length; i++)
 		{
 			m_imgHpArray[i].sprite = spr_LifeTrue;

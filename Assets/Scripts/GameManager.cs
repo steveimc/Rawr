@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 			Destroy(gameObject);
 		}
 		Instance = this;
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
 	}
 
 	private void Start()
@@ -87,14 +87,14 @@ public class GameManager : MonoBehaviour
 		return playerCount;
 	}
 	
-	void OnLevelWasLoaded(int level) 
+/*	void OnLevelWasLoaded(int level) 
 	{
 		if(level == 0)
 		{
 			Instance = null;
 			Destroy(this.gameObject);
 		}
-	}
+	}*/
 
 	private int MaxEnemiesOnScreen(int stage)
 	{
