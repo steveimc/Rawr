@@ -167,7 +167,8 @@ public class HeroStatus : MonoBehaviour
 		{
 			foreach(Renderer r in renderers)
 			{
-				r.material.shader = Shader.Find("Unlit/HeroShaderAnimated");
+				if(r.material.shader.name == "Unlit/HeroShader")
+					r.material.shader = Shader.Find("Unlit/HeroShaderAnimated");
 			}
 
 			Invoke("ReturnToNormalShader", 2.0f);
@@ -212,7 +213,8 @@ public class HeroStatus : MonoBehaviour
 	{
 		foreach(Renderer r in renderers)
 		{
-			r.material.shader = Shader.Find("Unlit/HeroShader");
+			if(r.material.shader.name == "Unlit/HeroShaderAnimated")
+				r.material.shader = Shader.Find("Unlit/HeroShader");
 		}
 	}
 	

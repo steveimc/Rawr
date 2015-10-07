@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
 	{
 		m_iCurrentEssences++;
 		m_Stage.UpdateEssences(m_iCurrentEssences);
+		HUDController.instance.UpdateCurrentEssences(m_iCurrentEssences);
 	}
 
 	private void InstantiatePlayers()

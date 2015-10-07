@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HUDController : Singleton<HUDController> 
 {
@@ -8,6 +9,10 @@ public class HUDController : Singleton<HUDController>
 
 	[SerializeField] private UIPlayer[] players;
 	[SerializeField] private StageBanners stageBanner;
+
+	[SerializeField] private Text stageText;
+	[SerializeField] private Text currentEssences;
+	[SerializeField] private Text totalEssences;
 	
 	void Start()
 	{
@@ -38,7 +43,29 @@ public class HUDController : Singleton<HUDController>
 	{
 		for(int i = 0; i < players.Length; i++)
 			players[i].RestoreHP();
+
+		SetStageText(nextStage+1);
+
 		// Stages go from 0 to 1,  banners go from 1 to 6
 		stageBanner.ShowBanner(nextStage + 1);
+	}
+
+	public void SetTotalEssences(int essencesToPass)
+	{
+		currentEssences.text = "0";
+		totalEssences.text = essencesToPass.ToString();
+	}
+
+	public void UpdateCurrentEssences(int currEssences)
+	{
+		currentEssences.text = currEssences.ToString();
+	}
+
+	private void SetStageText(int stage)
+	{
+		if(stage < 6)
+			stageText.text = "Stage " + stage;
+		else
+			stageText.text = "Final Boss";
 	}
 }
