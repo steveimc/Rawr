@@ -36,12 +36,9 @@ public class HUDController : Singleton<HUDController>
 
 	public void ShowStageBanner(int nextStage)
 	{
+		for(int i = 0; i < players.Length; i++)
+			players[i].RestoreHP();
 		// Stages go from 0 to 1,  banners go from 1 to 6
 		stageBanner.ShowBanner(nextStage + 1);
-	}
-
-	public void HeroRespawn(int whichHero)
-	{
-		players[whichHero-1].RestoreHP();
 	}
 }

@@ -186,6 +186,11 @@ public class HeroStatus : MonoBehaviour
 	{
 		return m_bHasSword;
 	}
+
+	public void RestoreHeroHealth()
+	{
+		m_iHeroHealth = MAX_HEALTH;
+	}
 }
 
 

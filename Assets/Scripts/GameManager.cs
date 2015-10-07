@@ -60,7 +60,8 @@ public class GameManager : MonoBehaviour
 		{
 			// TODO: Else -> Boss fight
 		}
-
+		for(int i = 0; i < player.Length; i++)
+			player[i].RestoreHeroHealth();
 	}
 
 	public void OnEssenceCaptured()
