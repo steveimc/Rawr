@@ -12,16 +12,18 @@ public class HeroStatus : MonoBehaviour
 	const int MAX_ENERGY = 10;
 
 	GameObject m_goFrostNova;
-
+	Renderer[] renderers;
 	//string playerName, int whichHero, int maxHealth, int maxFatigue
 
-	private bool m_bHasSword = true;
+	private bool m_bHasSword = false;
 
 	private GameObject m_FrostNova;
 
 	internal PlayerSyncInput syncInput;
 
 	internal HeroBaseController m_Controller;
+
+	private HeroStatus[] players;
 
 //	private GameObject[] playerObject = new GameObject[sizeof(HeroId)];
 
@@ -78,6 +80,9 @@ public class HeroStatus : MonoBehaviour
 
 		m_sPlayerName = gameObject.name;
 		HUDController.instance.InitUIPlayer(m_sPlayerName,m_iHeroId,MAX_HEALTH,MAX_ENERGY);
+
+		renderers = GetComponentsInChildren<Renderer>();
+		players = FindObjectsOfType<HeroStatus>();
 	}
 
 	public void DropSword()
@@ -155,7 +160,61 @@ public class HeroStatus : MonoBehaviour
 
 	public void TakeDamage(int dmg)
 	{
+		CancelInvoke();
 		m_iHeroHealth -= dmg;
+
+		if(m_iHeroHealth > 0)
+		{
+			Material material = new Material(Shader.Find("Unlit/HeroShaderAnimated"));
+
+			foreach(Renderer r in renderers)
+			{
+				r.material = material;
+			}
+
+			Invoke("ReturnToNormalShader", 2.0f);
+		}
+		else if(m_iHeroHealth <= 0)
+		{
+			DropSword();
+			ChangeHeroController();
+
+			this.GetComponent<Renderer>().enabled = false;
+
+			if(players.Length > 1)
+			{
+				if(players[0] == this)
+				{
+					if(players[1].m_iHeroHealth <= 0)
+						Invoke("RestartGame", 3.0f);
+				}
+				else
+				{
+					if(players[0].m_iHeroHealth <= 0)
+						Invoke("RestartGame", 3.0f);
+				}
+			}
+			else
+			{
+				Invoke("RestartGame", 3.0f);
+			}
+		}
+
+	}
+
+	private void RestartGame()
+	{
+		Application.LoadLevel("Loading");
+	}
+
+	private void ReturnToNormalShader()
+	{
+		Material material = new Material(Shader.Find("Unlit/HeroShader"));
+
+		foreach(Renderer r in renderers)
+		{
+			r.material = material;
+		}
 	}
 	
 	public int GetHealth()
@@ -190,6 +249,7 @@ public class HeroStatus : MonoBehaviour
 	public void RestoreHeroHealth()
 	{
 		m_iHeroHealth = MAX_HEALTH;
+		this.GetComponent<Renderer>().enabled = true;
 	}
 }
 

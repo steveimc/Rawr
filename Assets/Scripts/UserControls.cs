@@ -32,8 +32,9 @@ public class UserControls : MonoBehaviour
 		else if(m_Controller != m_Hero.m_Controller)
 		{
 			m_Controller = m_Hero.m_Controller;
+			m_AnimationController.ChangeAnimator();
 		}
-		else
+		else if(m_Hero.m_iHeroHealth > 0)
 		{
 			if (!m_bJump)
 			{
@@ -50,8 +51,6 @@ public class UserControls : MonoBehaviour
 			{
 				m_Hero.DropSword();
 				m_Hero.ChangeHeroController();
-				m_Controller = m_Hero.m_Controller;
-				m_AnimationController.ChangeAnimator();
 			}
 
 			float fVertical = Input.GetAxis(InputBank.VERTICAL+m_Hero.m_iHeroId);

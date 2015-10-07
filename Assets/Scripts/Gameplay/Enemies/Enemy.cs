@@ -4,6 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
 	[SerializeField] Essence essence;
+	protected const float TIME_LIMIT = 2.0f;
 
 	protected int m_iHealth;
 

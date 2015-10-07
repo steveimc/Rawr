@@ -11,8 +11,6 @@ public class EnemySpirit : Enemy
 
 	const float MIN_DISTANCE = 0.5f;
 	const float MAX_SPEED = 2.0f;
-	const float TIME_LIMIT = 1.5f;
-
 
 	private void Start()
 	{

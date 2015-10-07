@@ -7,7 +7,6 @@ public class EnemyDragon : Enemy
 
 	[SerializeField] Rigidbody2D m_FireBall;
 
-	const float TIME_LIMIT = 1.5f;
 	const int MAX_FORCE = 15;
 	const int MIN_FORCE = 5;
 
