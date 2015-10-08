@@ -5,14 +5,18 @@ public class AnimationActions : MonoBehaviour
 {
 	[SerializeField] HeroControllerSword m_HeroController;
 
+	[SerializeField] AudioSource audioSource;
 	Collider2D hitZoneCollider;
 
 	Collider2D spinZoneCollider;
 
 	private void Start()
 	{
-		hitZoneCollider = transform.parent.GetComponentInChildren<HitZone>().gameObject.GetComponent<Collider2D>();
-		spinZoneCollider = transform.parent.GetComponentInChildren<SpinZone>().gameObject.GetComponent<Collider2D>();
+		if(transform.parent.GetComponentInChildren<HitZone>() != null)
+		{
+			hitZoneCollider = transform.parent.GetComponentInChildren<HitZone>().gameObject.GetComponent<Collider2D>();
+			spinZoneCollider = transform.parent.GetComponentInChildren<SpinZone>().gameObject.GetComponent<Collider2D>();
+		}
 	}
 
 	private void ThrowSword()
@@ -83,9 +87,11 @@ public class AnimationActions : MonoBehaviour
 
 	void LeftFootStep()
 	{
+		//AudioManager.instance.PlayFrom(audioSource, Audio.Bank.LEFT_FOOT);
 	}
 
 	void RightFootStep()
 	{
+		//AudioManager.instance.PlayFrom(audioSource, Audio.Bank.RIGHT_FOOT);
 	}
 }
