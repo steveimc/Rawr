@@ -80,4 +80,12 @@ public class AnimationActions : MonoBehaviour
 			}
 		}
 	}
+
+	void LeftFootStep()
+	{
+	}
+
+	void RightFootStep()
+	{
+	}
 }

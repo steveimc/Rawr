@@ -22,6 +22,12 @@ public class AudioManager : Singleton<AudioManager>
 		audioSource.Play();
 	}
 
+	public void PlayFrom(AudioSource myAudioSource, AudioClip audioClip)
+	{
+		myAudioSource.clip = audioClip;
+		myAudioSource.Play();
+	}
+
 	public void Stop(AudioSource audioSource)
 	{
 		audioSource.Stop();
