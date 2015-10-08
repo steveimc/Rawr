@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
 		int deadPlayers = 0;
 		foreach(HeroStatus hero in player)
 		{
-			if(hero.GetHealth() <= 0)
+			if(hero != null && hero.GetHealth() <= 0)
 				deadPlayers++;
 		}
 
