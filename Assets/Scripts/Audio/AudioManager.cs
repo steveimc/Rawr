@@ -3,8 +3,10 @@ using System.Collections;
 
 public class AudioManager : Singleton<AudioManager> 
 {
+	AudioSource audioSource;
 	public void Awake()
 	{
+		audioSource = GetComponent<AudioSource>();
 		Audio.Bank = GetComponent<AudioBank>();
 		DontDestroyOnLoad(this);
 	}
@@ -14,7 +16,7 @@ public class AudioManager : Singleton<AudioManager>
 		AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position);
 	}
 
-	public void Play(AudioSource audioSource, AudioClip audioClip)
+	public void Play(AudioClip audioClip)
 	{
 		audioSource.clip = audioClip;
 		audioSource.Play();

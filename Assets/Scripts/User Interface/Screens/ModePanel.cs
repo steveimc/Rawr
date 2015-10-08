@@ -84,6 +84,7 @@ public class ModePanel : BaseScreen
 			buttonTips[currentlySelected].Hide();
 		}
 
+		AudioManager.instance.Play(Audio.Bank.UI_HOVER);
 		currentlySelected = button;
 		buttonTips[currentlySelected].Show();
 		EventSystem.current.SetSelectedGameObject(buttons[currentlySelected].gameObject);

@@ -24,11 +24,13 @@ public class ControllerButton : Button
 
 	public void ShowPress()
 	{
+		AudioManager.instance.Play(Audio.Bank.UI_ACCEPT);
 		this.DoStateTransition (Selectable.SelectionState.Pressed, false);
 	}
 
 	public void ShowHighlighted()
 	{
+		AudioManager.instance.Play(Audio.Bank.UI_HOVER);
 		this.DoStateTransition (Selectable.SelectionState.Highlighted, false);
 	}
 
@@ -39,6 +41,7 @@ public class ControllerButton : Button
 
 	public void ShowDisabled()
 	{
+		AudioManager.instance.Play(Audio.Bank.UI_BACK);
 		this.DoStateTransition (Selectable.SelectionState.Disabled, false);
 	}
 

@@ -9,5 +9,5 @@ public class AudioBank : MonoBehaviour
 	public AudioClip UI_ACCEPT;
 	public AudioClip UI_CANCEL;
 	public AudioClip UI_BACK;
-	public AudioClip UI_MOVE;
+	public AudioClip UI_HOVER;
 }
