@@ -119,27 +119,34 @@ public class ModePanel : BaseScreen
 
 	public void OnSinglePlayerMode()
 	{
+		AudioManager.instance.Play(Audio.Bank.UI_ACCEPT);
 		Game.Instance.StartAsSinglePlayer();
 	}
 
 	public void OnArcadeMode()
 	{
-		Debug.Log("Arcade");
+		AudioManager.instance.Play(Audio.Bank.UI_BACK);
+		Debug.Log("Arcade Coming soon");
 	}
 
 	public void OnLocalMultiplayer()
 	{
+		AudioManager.instance.Play(Audio.Bank.UI_ACCEPT);
 		Game.Instance.StartAsLocalGame();;
 	}
 
 	public void OnLanMultiplayer()
 	{
-		ScreenManager.instance.Push<MenuLan>();
+		AudioManager.instance.Play(Audio.Bank.UI_BACK);
+		Debug.Log("Lan Multiplayer Coming soon");
+		// ScreenManager.instance.Push<MenuLan>();
 	}
 
 	public void OnOnlineMultiplayer()
 	{
-		UINetworkManager.instance.EnableMatchMaker();
-		ScreenManager.instance.Push<MenuOnline>();
+		AudioManager.instance.Play(Audio.Bank.UI_BACK);
+		Debug.Log("Online Multiplayer Coming soon");
+		//UINetworkManager.instance.EnableMatchMaker();
+		// ScreenManager.instance.Push<MenuOnline>();
 	}
 }
