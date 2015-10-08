@@ -22,6 +22,8 @@ public class HeroStatus : MonoBehaviour
 
 	internal HeroBaseController m_Controller;
 
+	private float m_EnergyTimer = 0;
+
 	HeroStatus()
 	{
 		m_iHeroHealth = MAX_HEALTH;
@@ -235,26 +237,34 @@ public class HeroStatus : MonoBehaviour
 
 	private void Update()
 	{
-		if(m_bHasSword)
+		m_EnergyTimer += Time.deltaTime;
+
+		if(m_EnergyTimer > 1)
 		{
-			m_iHeroEnergy -= (int)(Time.deltaTime * 50);
-			if(m_iHeroEnergy < 0)
+			m_EnergyTimer = 0;
+
+			if(m_bHasSword)
 			{
-				m_iHeroEnergy = 0;
-				DropSword();
-				ChangeHeroController();
+				m_iHeroEnergy -= 10;
+				if(m_iHeroEnergy < 0)
+				{
+					m_iHeroEnergy = 0;
+					if(!m_Controller.m_isSpinning)
+					{
+						DropSword();
+						ChangeHeroController();
+					}
+				}
+				HUDController.instance.UpdateHeroEnergy(m_iHeroId, m_iHeroEnergy);
 			}
-			HUDController.instance.UpdateHeroEnergy(m_iHeroId, m_iHeroEnergy);
-		}
-		else
-		{
-			if(m_iHeroEnergy < MAX_ENERGY)
+			else
 			{
-				m_iHeroEnergy += (int)(Time.deltaTime * 50);
+				m_iHeroEnergy += 10;
 				if(m_iHeroEnergy > MAX_ENERGY)
 					m_iHeroEnergy = MAX_ENERGY;
+				
+				HUDController.instance.UpdateHeroEnergy(m_iHeroId, m_iHeroEnergy);
 			}
-			HUDController.instance.UpdateHeroEnergy(m_iHeroId, m_iHeroEnergy);
 		}
 	}
 }

@@ -28,6 +28,7 @@ public class UserControls : MonoBehaviour
 		{
 			m_Hero.ChangeHeroController();
 			m_Controller = m_Hero.m_Controller;
+			m_AnimationController.ChangeAnimator();
 		}
 		else if(m_Controller != m_Hero.m_Controller)
 		{
@@ -49,8 +50,12 @@ public class UserControls : MonoBehaviour
 
 			if(Input.GetButtonDown(InputBank.SWORD+m_Hero.m_iHeroId))
 			{
-				m_Hero.DropSword();
-				m_Hero.ChangeHeroController();
+				if(!m_Controller.m_isSpinning)
+				{
+					m_Hero.DropSword();
+					m_Hero.ChangeHeroController();
+				}
+
 			}
 
 			float fVertical = Input.GetAxis(InputBank.VERTICAL+m_Hero.m_iHeroId);

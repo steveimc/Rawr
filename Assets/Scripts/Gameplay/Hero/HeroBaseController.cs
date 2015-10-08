@@ -35,7 +35,7 @@ public abstract class HeroBaseController : MonoBehaviour
 	protected bool m_isDashing;
 	protected bool m_isWallJumping;
 	protected bool m_isCrouching;
-	protected bool m_isSpinning;
+	internal bool m_isSpinning;
 	protected bool m_isCharging;
 	protected bool m_isFalling;
 	protected bool m_isJumping;

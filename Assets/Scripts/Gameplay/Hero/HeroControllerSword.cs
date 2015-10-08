@@ -11,13 +11,16 @@ public class HeroControllerSword : HeroBaseController
 		m_Facing = m_animator.CheckDirection();
 		Flip(this.transform);
 
+		/*
 		m_comboTimer += Time.fixedDeltaTime;
+
 
 		if(m_comboTimer > 0.7f)
 		{
 			m_AttackType = 0;
 			m_comboTimer = 0;
 		}
+		*/
 
 		if(!IsGrounded() && !m_isFalling)
 		{
@@ -165,6 +168,7 @@ public class HeroControllerSword : HeroBaseController
 			m_chargeTimer = 0;
 			m_isSpinning = true;
 			m_isCharging = false;
+			AudioManager.instance.PlayFrom(GetComponent<AudioSource>(),Audio.Bank.SPIN_SWORD);
 		}
 		else
 		{
@@ -178,13 +182,15 @@ public class HeroControllerSword : HeroBaseController
 			{
 				m_isCharging = false;
 				m_animator.Attack(m_AttackType);
+				AudioManager.instance.PlayFrom(GetComponent<AudioSource>(),Audio.Bank.SWING_SWORD);
 
+				/*
 				if(m_AttackType == 0)
 					m_comboTimer = 0;
 				else if(m_AttackType > 2)
 					m_AttackType = 0;
-
-				m_AttackType++;
+				*/
+				//m_AttackType++;
 			}
 		}	
 

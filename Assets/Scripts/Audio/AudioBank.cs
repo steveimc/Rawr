@@ -9,6 +9,9 @@ public class AudioBank : MonoBehaviour
 	public AudioClip RIGHT_FOOT;
 	public AudioClip LEFT_FOOT;
 
+	public AudioClip SWING_SWORD;
+	public AudioClip SPIN_SWORD;
+
 	public AudioClip UI_ACCEPT;
 	public AudioClip UI_CANCEL;
 	public AudioClip UI_BACK;

@@ -94,11 +94,11 @@ public class HeroControllerNoSword : HeroBaseController
 	
 			if(IsMoving(fHorizontal) && !m_isCrouching && !m_isCharging)
 			{
-				m_fAcceleration += Time.deltaTime * 2.5f;
-				m_fAcceleration = Mathf.Clamp(m_fAcceleration,0f,1f);
+				//m_fAcceleration += Time.deltaTime * 2.5f;
+				//m_fAcceleration = Mathf.Clamp(m_fAcceleration,0f,1f);
 				// Move the character
 				if(IsGrounded())
-					m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp((fHorizontal * m_MaxSpeed) * m_fAcceleration,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
+					m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp((fHorizontal * m_MaxSpeed)/* * m_fAcceleration*/,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
 				else
 					m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x + (fHorizontal),-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
 			}

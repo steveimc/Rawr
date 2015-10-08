@@ -6,17 +6,15 @@ public class AnimationActions : MonoBehaviour
 	[SerializeField] HeroControllerSword m_HeroController;
 
 	[SerializeField] AudioSource audioSource;
+
 	Collider2D hitZoneCollider;
 
 	Collider2D spinZoneCollider;
 
 	private void Start()
 	{
-		if(transform.parent.GetComponentInChildren<HitZone>() != null)
-		{
-			hitZoneCollider = transform.parent.GetComponentInChildren<HitZone>().gameObject.GetComponent<Collider2D>();
-			spinZoneCollider = transform.parent.GetComponentInChildren<SpinZone>().gameObject.GetComponent<Collider2D>();
-		}
+		hitZoneCollider = transform.parent.GetComponentInChildren<HitZone>().gameObject.GetComponent<Collider2D>();
+		spinZoneCollider = transform.parent.GetComponentInChildren<SpinZone>().gameObject.GetComponent<Collider2D>();
 	}
 
 	private void ThrowSword()
@@ -44,7 +42,6 @@ public class AnimationActions : MonoBehaviour
 
 	private void ChangeAnimator()
 	{
-		this.transform.rotation = Quaternion.Euler(0,180,0); 
 		m_HeroController.m_animator.ChangeAnimator();
 	}
 
