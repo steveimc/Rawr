@@ -9,6 +9,7 @@ public class HUDController : Singleton<HUDController>
 
 	[SerializeField] private UIPlayer[] players;
 	[SerializeField] private StageBanners stageBanner;
+	[SerializeField] private GameObject gameOverBanner;
 
 	[SerializeField] private Text stageText;
 	[SerializeField] private Text currentEssences;
@@ -68,5 +69,10 @@ public class HUDController : Singleton<HUDController>
 			stageText.text = "Stage " + stage;
 		else
 			stageText.text = "Final Boss";
+	}
+
+	public void OnGameOver()
+	{
+		gameOverBanner.SetActive(true);
 	}
 }
