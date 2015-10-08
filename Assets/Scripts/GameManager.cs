@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour
 
 	private void OnStageCompleted(int stage)
 	{
+		m_iCurrentEssences = 0;
+		HUDController.instance.UpdateCurrentEssences(m_iCurrentEssences);
+
 		if(stage + 1 < m_iNumOfStages)
 		{
 			m_Stage.Init(stage + 1);

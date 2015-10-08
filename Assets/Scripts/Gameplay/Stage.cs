@@ -30,6 +30,7 @@ public class Stage
 	public void Init(int stageNumber)
 	{
 		m_iStageNumber 	= stageNumber;
+		m_iCurrentEssences = 0;
 		m_iEssencesToPass 	= EssencesForStageMultiplier(m_iStageNumber);
 		
 		HUDController.instance.ShowStageBanner(m_iStageNumber);

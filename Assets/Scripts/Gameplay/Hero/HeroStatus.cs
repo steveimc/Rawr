@@ -13,7 +13,6 @@ public class HeroStatus : MonoBehaviour
 
 	GameObject m_goFrostNova;
 	Renderer[] renderers;
-	//string playerName, int whichHero, int maxHealth, int maxFatigue
 
 	private bool m_bHasSword = false;
 
@@ -22,10 +21,6 @@ public class HeroStatus : MonoBehaviour
 	internal PlayerSyncInput syncInput;
 
 	internal HeroBaseController m_Controller;
-
-	private HeroStatus[] players;
-
-//	private GameObject[] playerObject = new GameObject[sizeof(HeroId)];
 
 	HeroStatus()
 	{
@@ -37,7 +32,6 @@ public class HeroStatus : MonoBehaviour
 	private void Start () 
 	{
 		m_goFrostNova = GetComponentInChildren<FrostNova>().gameObject;
-		// STEVE's previous code: m_iHeroId = GameManager.Instance.AssignPlayerId(this.gameObject.name);
 		if(Game.Instance.IsLocalGame)
 		{
 			m_iHeroId = GameManager.Instance.PlayerJoined(this);
@@ -82,7 +76,6 @@ public class HeroStatus : MonoBehaviour
 		HUDController.instance.InitUIPlayer(m_sPlayerName,m_iHeroId,MAX_HEALTH,MAX_ENERGY);
 
 		renderers = GetComponentsInChildren<Renderer>();
-		players = FindObjectsOfType<HeroStatus>();
 	}
 
 	public void DropSword()
