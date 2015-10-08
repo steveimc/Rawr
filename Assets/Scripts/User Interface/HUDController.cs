@@ -47,7 +47,8 @@ public class HUDController : Singleton<HUDController>
 		SetStageText(nextStage+1);
 
 		// Stages go from 0 to 1,  banners go from 1 to 6
-		stageBanner.ShowBanner(nextStage + 1);
+		if(stageBanner != null)
+			stageBanner.ShowBanner(nextStage + 1);
 	}
 
 	public void SetTotalEssences(int essencesToPass)
