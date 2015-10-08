@@ -102,4 +102,25 @@ public class GameManager : MonoBehaviour
 		return maxEnemies;
 	}
 
+	public void HeroDied()
+	{
+		int deadPlayers = 0;
+		foreach(HeroStatus hero in player)
+		{
+			if(hero.GetHealth() <= 0)
+				deadPlayers++;
+		}
+
+		if((deadPlayers >= player.Length))
+		{
+			HUDController.instance.OnGameOver();
+			Invoke("RestartGame", 3.0f);
+		}	
+	}
+	
+	private void RestartGame()
+	{
+		Application.LoadLevel("Loading");
+	}
+
 }

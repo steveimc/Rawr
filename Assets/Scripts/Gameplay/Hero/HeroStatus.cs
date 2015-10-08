@@ -9,7 +9,7 @@ public class HeroStatus : MonoBehaviour
 	internal string m_sPlayerName;
 
 	const int MAX_HEALTH = 5;
-	const int MAX_ENERGY = 10;
+	const int MAX_ENERGY = 100;
 
 	GameObject m_goFrostNova;
 	Renderer[] renderers;
@@ -168,7 +168,7 @@ public class HeroStatus : MonoBehaviour
 			foreach(Renderer r in renderers)
 			{
 				if(r.material.shader.name == "Unlit/HeroShader")
-					r.material.shader = Shader.Find("Unlit/HeroShaderAnimated");
+					r.material.shader = Resources.Load("HeroShaderAnimated") as Shader;
 			}
 
 			Invoke("ReturnToNormalShader", 2.0f);
@@ -180,33 +180,8 @@ public class HeroStatus : MonoBehaviour
 				DropSword();
 				ChangeHeroController();
 			}
-
 			Die ();
-
-			if(players.Length > 1)
-			{
-				if(players[0] == this)
-				{
-					if(players[1].m_iHeroHealth <= 0)
-						Invoke("RestartGame", 3.0f);
-				}
-				else
-				{
-					if(players[0].m_iHeroHealth <= 0)
-						Invoke("RestartGame", 3.0f);
-				}
-			}
-			else
-			{
-				Invoke("RestartGame", 3.0f);
-			}
 		}
-
-	}
-
-	private void RestartGame()
-	{
-		Application.LoadLevel("Loading");
 	}
 
 	private void ReturnToNormalShader()
@@ -214,7 +189,7 @@ public class HeroStatus : MonoBehaviour
 		foreach(Renderer r in renderers)
 		{
 			if(r.material.shader.name == "Unlit/HeroShaderAnimated")
-				r.material.shader = Shader.Find("Unlit/HeroShader");
+				r.material.shader = Resources.Load("HeroShader") as Shader;
 		}
 	}
 	
@@ -258,10 +233,38 @@ public class HeroStatus : MonoBehaviour
 
 	private void Die()
 	{
+		GameManager.Instance.HeroDied();
 		foreach(Renderer r in renderers)
 		{
 			r.enabled = false;
 		}
+	}
+
+	private void Update()
+	{
+		if(m_bHasSword)
+		{
+			m_iHeroEnergy -= (int)(Time.deltaTime * 50);
+			if(m_iHeroEnergy < 0)
+			{
+				m_iHeroEnergy = 0;
+				DropSword();
+				ChangeHeroController();
+			}
+			HUDController.instance.UpdateHeroEnergy(m_iHeroId, m_iHeroEnergy);
+		}
+		else
+		{
+			if(m_iHeroEnergy < MAX_ENERGY)
+			{
+				m_iHeroEnergy += (int)(Time.deltaTime * 50);
+				if(m_iHeroEnergy > MAX_ENERGY)
+					m_iHeroEnergy = MAX_ENERGY;
+			}
+			HUDController.instance.UpdateHeroEnergy(m_iHeroId, m_iHeroEnergy);
+		}
+
+		Debug.Log(m_iHeroEnergy);
 	}
 }
 
