@@ -263,8 +263,6 @@ public class HeroStatus : MonoBehaviour
 			}
 			HUDController.instance.UpdateHeroEnergy(m_iHeroId, m_iHeroEnergy);
 		}
-
-		Debug.Log(m_iHeroEnergy);
 	}
 }
 
