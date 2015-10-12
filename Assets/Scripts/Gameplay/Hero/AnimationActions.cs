@@ -50,6 +50,7 @@ public class AnimationActions : MonoBehaviour
 		if(iStatus == 0)
 		{
 			hitZoneCollider.enabled = false;
+			m_HeroController.m_isAttacking = false;
 		}
 		else
 		{

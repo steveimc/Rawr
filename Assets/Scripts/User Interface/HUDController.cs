@@ -73,6 +73,7 @@ public class HUDController : Singleton<HUDController>
 
 	public void OnGameOver()
 	{
+		AudioManager.instance.PlayWorld(Audio.Bank.GAME_OVER);
 		gameOverBanner.SetActive(true);
 	}
 }

@@ -125,9 +125,9 @@ public class AnimationController : MonoBehaviour
 		}
 	}
 
-	internal void Charge()
+	internal void Charge(bool bStatus)
 	{
-		animator.SetTrigger("Charge");
+		animator.SetBool("Charge", bStatus);
 	}
 
 	internal void Spin()

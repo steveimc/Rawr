@@ -7,13 +7,13 @@ public class HeroControllerNoSword : HeroBaseController
 
 	internal override void Move(float fHorizontal, float fVertical, bool bJump, bool bDash, bool bJumpHold)
 	{
-		if(m_HeroRigidBody.velocity.y < -15)
+		if(m_HeroRigidBody.velocity.y < -10)
 			gameObject.layer = LayerMask.NameToLayer("Hero");
 		
 		m_Facing = m_animator.CheckDirection();
 		Flip(this.transform);
 
-		if(!IsGrounded() && !m_isFalling && !m_isOnWall)
+		if(!IsGrounded() && m_HeroRigidBody.velocity.y < 0 && !m_isFalling)
 		{
 			m_animator.Fall();
 			m_isFalling = true;
@@ -35,79 +35,23 @@ public class HeroControllerNoSword : HeroBaseController
 			Crouch(fVertical);
 		}
 
-		if(!IsGrounded() && IsWallded() && m_canWallJump)
+		if(!m_isDashing && !m_isCrouching && !m_isAttacking)
 		{
-
-			if(!m_isOnWall)
-			{
-				m_isOnWall = true;
-				m_animator.Wall();
-			}
-
-			m_timer += Time.fixedDeltaTime;
-
-			m_isDashing = false;
-
-			if(bJump)
-			{
-				gameObject.layer = LayerMask.NameToLayer("HeroJump");
-
-				if(m_Facing == Direction.RIGHT)
-					m_HeroRigidBody.velocity = new Vector2(-15, 16);
-				else
-					m_HeroRigidBody.velocity = new Vector2(15, 16);
-
-				//animator.WallJump();
-				m_isOnWall = false;
-				m_isFalling =false;
-				m_isJumping = true;
-				bJump = false;
-				m_isWallJumping = true;
-				m_canWallJump = true;
-				m_timer = 0;
-				m_LastPos = this.transform.position;
-				return;
-			}
-
-			if(m_timer < 2.0f)
-			{
-				m_HeroRigidBody.velocity = new Vector2(m_HeroRigidBody.velocity.x , m_HeroRigidBody.velocity.y * 0.5f);
-			}
-			else
-			{
-				m_isOnWall = false;
-				m_isFalling =false;
-				m_canWallJump = false;
-				m_timer = 0;
-			}
-				
-
-
-		}
-		else if(!m_isDashing && !m_isWallJumping )
-		{
-			if(m_isOnWall)
-			{
-				m_isOnWall = false;
-				m_isFalling = false;
-			}
-	
 			if(IsMoving(fHorizontal) && !m_isCrouching && !m_isCharging)
 			{
-				//m_fAcceleration += Time.deltaTime * 2.5f;
-				//m_fAcceleration = Mathf.Clamp(m_fAcceleration,0f,1f);
-				// Move the character
 				if(IsGrounded())
-					m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp((fHorizontal * m_MaxSpeed)/* * m_fAcceleration*/,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
+					m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp((fHorizontal * m_MaxSpeed),-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
 				else
 					m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x + (fHorizontal),-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
 			}
 			else if (!IsMoving(fHorizontal) && IsGrounded())
 			{
-				m_fAcceleration = 0;
 				m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x * 0.8f,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
 			}
-
+		}
+		else if(!m_isDashing)
+		{
+			m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x * 0.8f,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
 		}
 
 		if(bDash && m_distance <= m_DashDistance && !m_isDashing && !m_isCharging)
@@ -118,51 +62,22 @@ public class HeroControllerNoSword : HeroBaseController
 			m_HeroRigidBody.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 			Dash(fHorizontal);
 		}
-		else if(m_distance >= m_DashDistance)
+		else if(m_distance >= m_DashDistance || m_DashTimer > 0.5f)
 		{
 			m_UpperCollider.enabled = true;
 			m_isDashing = false;
 			m_HeroRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
 			m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x * 0.8f,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
 			m_distance = 0;
+			m_DashTimer  = 0;
 		}
 
 		if(m_isDashing)
 		{
+			m_DashTimer += Time.deltaTime;
 			m_canWallJump = true;
 			m_distance = Vector2.Distance(m_LastPos,this.transform.position);
-			//m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x,-m_MaxSpeed*3f,m_MaxSpeed*3f), m_HeroRigidBody.velocity.y);
-
 		}
-
-		if(m_isWallJumping && !m_isDashing)
-		{
-			m_isOnWall = false;
-			m_distance = Vector2.Distance(m_LastPos,this.transform.position);
-			//m_HeroRigidBody.velocity = new Vector2(Mathf.Clamp(m_HeroRigidBody.velocity.x,-m_MaxSpeed,m_MaxSpeed), m_HeroRigidBody.velocity.y);
-		}
-
-		if(m_isWallJumping && m_distance >= m_DashDistance)
-		{
-			m_isWallJumping = false;
-		}
-
-		if(m_isJumping)
-		{
-			m_jumpTimer += Time.deltaTime;
-
-			if(bJumpHold)
-			{
-				m_HeroRigidBody.velocity = new Vector2(m_HeroRigidBody.velocity.x, m_HeroRigidBody.velocity.y + (m_jumpTimer * 2));
-			}
-
-			if(m_jumpTimer > 0.5f)
-			{
-				m_isJumping = false;
-				m_jumpTimer = 0;
-			}
-		}
-
 	}
 
 	internal override void Jump()
@@ -171,10 +86,12 @@ public class HeroControllerNoSword : HeroBaseController
 
 		m_animator.Jump();
 
+		AudioManager.instance.PlayFrom(GetComponent<AudioSource>(), Audio.Bank.JUMP);
+
 		m_timer = 0;
 		m_canWallJump = true;
 		m_isJumping = true;
-		m_HeroRigidBody.velocity = new Vector2(m_HeroRigidBody.velocity.x,15);
+		m_HeroRigidBody.velocity = new Vector2(m_HeroRigidBody.velocity.x,	35);
 	}
 		
 	internal override void Attack(float fHorizontal, bool bAttack, bool bCharge)

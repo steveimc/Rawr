@@ -24,10 +24,14 @@ public class GameManager : MonoBehaviour
 	internal	int m_iEnemiesOnScreen = 0;
 	private	 	int m_iNumOfStages = 5;
 
+	private 	bool m_dieOnce;
+
 	public static GameManager Instance { get; private set; }
 	
 	private void Awake()
 	{
+		m_dieOnce = false;
+
 		if(Instance != null && Instance != this)
 		{
 			Destroy(gameObject);
@@ -119,13 +123,23 @@ public class GameManager : MonoBehaviour
 				deadPlayers++;
 		}
 
-		if((deadPlayers >= player.Length))
+		if((deadPlayers > 0))
 		{
-			HUDController.instance.OnGameOver();
-			Invoke("RestartGame", 3.0f);
+			if(player[1] == null && !m_dieOnce)
+			{
+				HUDController.instance.OnGameOver();
+				Invoke("RestartGame", 3.0f);
+				m_dieOnce = true;
+			}
+			else if(deadPlayers > player.Length && !m_dieOnce)
+			{
+				HUDController.instance.OnGameOver();
+				Invoke("RestartGame", 3.0f);
+				m_dieOnce = true;
+			}
 		}	
 	}
-	
+
 	private void RestartGame()
 	{
 		Application.LoadLevel("Loading");

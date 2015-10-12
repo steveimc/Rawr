@@ -160,6 +160,7 @@ public class HeroStatus : MonoBehaviour
 
 		if(m_iHeroHealth > 0)
 		{
+			ScreenShake.instance.shake = 0.5f;
 			foreach(Renderer r in renderers)
 			{
 				if(r.material.shader.name == "Unlit/HeroShader")
@@ -249,8 +250,10 @@ public class HeroStatus : MonoBehaviour
 				if(m_iHeroEnergy < 0)
 				{
 					m_iHeroEnergy = 0;
-					if(!m_Controller.m_isSpinning)
+					if(!m_Controller.m_isSpinning )
 					{
+						m_Controller.m_isCharging = false;
+						m_Controller.m_isAttacking = false;
 						DropSword();
 						ChangeHeroController();
 					}

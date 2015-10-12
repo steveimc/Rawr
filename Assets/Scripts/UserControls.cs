@@ -42,20 +42,19 @@ public class UserControls : MonoBehaviour
 				// Read the jump input in Update so button presses aren't missed.
 				m_bJump = Input.GetButtonDown(InputBank.JUMP+m_Hero.m_iHeroId);
 				m_bDash = Input.GetButtonDown(InputBank.DASH+m_Hero.m_iHeroId);
-				m_bAttack = Input.GetButtonUp(InputBank.ATTACK+m_Hero.m_iHeroId);
-				m_bCharge = Input.GetButtonDown(InputBank.ATTACK+m_Hero.m_iHeroId);
+				m_bAttack = Input.GetButtonDown(InputBank.ATTACK+m_Hero.m_iHeroId);
+				m_bCharge = Input.GetButton(InputBank.ATTACK+m_Hero.m_iHeroId);
 			}
 				
 			m_bJumpHold = Input.GetButton(InputBank.JUMP+m_Hero.m_iHeroId);
 
 			if(Input.GetButtonDown(InputBank.SWORD+m_Hero.m_iHeroId))
 			{
-				if(!m_Controller.m_isSpinning)
+				if(!m_Controller.m_isSpinning && !m_Controller.m_isAttacking)
 				{
 					m_Hero.DropSword();
 					m_Hero.ChangeHeroController();
 				}
-
 			}
 
 			float fVertical = Input.GetAxis(InputBank.VERTICAL+m_Hero.m_iHeroId);

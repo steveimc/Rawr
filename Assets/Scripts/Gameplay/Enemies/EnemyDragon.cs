@@ -48,7 +48,7 @@ public class EnemyDragon : Enemy
 	{
 		if(col2D.gameObject.GetComponent<HeroStatus>())
 		{
-			this.GetComponent<Collider2D>().enabled = false;
+			this.GetComponent<BoxCollider2D>().enabled = false;
 			Invoke("EnableCollider", TIME_LIMIT);
 			HeroStatus player = col2D.gameObject.GetComponent<HeroStatus>();
 			player.TakeDamage(1);
@@ -57,6 +57,6 @@ public class EnemyDragon : Enemy
 
 	private void EnableCollider()
 	{
-		this.GetComponent<Collider2D>().enabled = true;
+		this.GetComponent<BoxCollider2D>().enabled = true;
 	}
 }

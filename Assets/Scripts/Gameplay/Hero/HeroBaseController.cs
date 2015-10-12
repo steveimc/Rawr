@@ -21,6 +21,8 @@ public abstract class HeroBaseController : MonoBehaviour
 	[SerializeField] protected float m_DashForce;  
 	[SerializeField] internal float m_ProjectileForce;
 	[SerializeField] protected float m_DashDistance;
+	protected float m_DashTimer;
+	internal bool m_isAttacking;
 
 	[SerializeField] protected BoxCollider2D m_UpperCollider;
 
@@ -36,7 +38,7 @@ public abstract class HeroBaseController : MonoBehaviour
 	protected bool m_isWallJumping;
 	protected bool m_isCrouching;
 	internal bool m_isSpinning;
-	protected bool m_isCharging;
+	internal bool m_isCharging;
 	protected bool m_isFalling;
 	protected bool m_isJumping;
 
@@ -110,7 +112,7 @@ public abstract class HeroBaseController : MonoBehaviour
 	{
 		m_animator.Crouch(fVertical);
 
-		if(fVertical < -0.1 && m_isCrouching == false)
+		if(fVertical < -0.3 && m_isCrouching == false)
 		{
 			if(m_animator.m_Hero.syncInput != null)
 				m_animator.m_Hero.syncInput.SendInput(UserInput.Crouch);
@@ -118,7 +120,7 @@ public abstract class HeroBaseController : MonoBehaviour
 			m_isCrouching = true;
 			m_UpperCollider.enabled = false;
 		}
-		else if(fVertical > -0.1 && m_isCrouching == true)
+		else if(fVertical > -0.3 && m_isCrouching == true)
 		{
 			if(m_animator.m_Hero.syncInput != null)
 				m_animator.m_Hero.syncInput.SendInput(UserInput.CrouchStop);

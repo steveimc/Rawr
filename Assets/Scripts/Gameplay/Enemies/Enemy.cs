@@ -4,6 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
 	[SerializeField] Essence essence;
+	protected int numberOfEssences = 1;
 	protected const float TIME_LIMIT = 2.0f;
 
 	protected int m_iHealth;
@@ -25,6 +26,9 @@ public class Enemy : MonoBehaviour
 
 	internal void DropEssence()
 	{
-		Instantiate(essence, transform.position, Quaternion.identity);
+		for(int i = 0; i < numberOfEssences; i++)
+		{
+			Instantiate(essence, transform.position, Quaternion.identity);
+		}
 	}
 }

@@ -3,13 +3,14 @@ using System.Collections;
 
 public class EnemySpirit : Enemy 
 {
+	GameObject[] linkedSpirits = new GameObject[2];
 	HeroStatus[] heroes;
 	Transform target;
 	Vector3 direction;
 
 	float rotZ;
 
-	const float MIN_DISTANCE = 0.5f;
+	const float MIN_DISTANCE = 2.5f;
 	const float MAX_SPEED = 2.0f;
 
 	private void Start()
@@ -49,7 +50,7 @@ public class EnemySpirit : Enemy
 			if(m_iHealth <= 0)
 			{
 				Destroy(this.gameObject);
-				GameManager.Instance.m_iEnemiesOnScreen--;
+				GameManager.Instance.m_iEnemiesOnScreen -= numberOfEssences;
 			}
 		}
 	}
@@ -76,7 +77,7 @@ public class EnemySpirit : Enemy
 	{
 		if(col2D.gameObject.GetComponent<HeroStatus>())
 		{
-			this.GetComponent<Collider2D>().enabled = false;
+			this.GetComponent<CircleCollider2D>().enabled = false;
 			Invoke("EnableCollider", TIME_LIMIT);
 			HeroStatus player = col2D.gameObject.GetComponent<HeroStatus>();
 			player.TakeDamage(1);
@@ -84,11 +85,43 @@ public class EnemySpirit : Enemy
 			if(player.GetHealth() <= 0)
 				target = null;
 		}
+		else if(col2D.gameObject.GetComponent<EnemySpirit>())
+		{
+			linkedSpirits[0] = col2D.gameObject;
+			linkedSpirits[1] = this.gameObject;
+
+			Vector3 scale;
+
+			if(this.transform.localScale.x > linkedSpirits[0].transform.localScale.x)
+				scale = this.transform.localScale;
+			else if(this.transform.localScale.x < linkedSpirits[0].transform.localScale.x)
+				scale = linkedSpirits[0].transform.localScale;
+			else
+				scale = this.transform.localScale;
+
+			this.transform.localScale = new Vector3(scale.x + 0.5f,scale.y+ 0.5f,scale.z+ 0.5f);
+			this.numberOfEssences++;
+
+			EnemySpirit[] allSpirits = FindObjectsOfType<EnemySpirit>();
+
+			for(int i = 0; i < allSpirits.Length; i++)
+			{
+				foreach(GameObject go in linkedSpirits)
+				{
+					if(go == allSpirits[i].gameObject)
+					{
+						Destroy (go .gameObject);
+						return;
+					}
+				}
+			}
+		}
+
 	}
 
 	private void EnableCollider()
 	{
-		this.GetComponent<Collider2D>().enabled = true;
+		this.GetComponent<CircleCollider2D>().enabled = true;
 	}
 
 	internal void SetDamage(int iDamage)
