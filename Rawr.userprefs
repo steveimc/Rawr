@@ -1,11 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/User Interface/HUD Elements/UIFilledBar.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Gameplay/Hero/HeroControllerNoSword.cs">
     <Files>
-      <File FileName="Assets/Scripts/User Interface/HUD Elements/UIFilledBar.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/User Interface/UINetworkManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/User Interface/ScreenManager/ScreenManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Game.cs" Line="81" Column="23" />
+      <File FileName="Assets/Scripts/User Interface/Screens/ModePanel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/HeroShader.shader" Line="1" Column="1" />
+      <File FileName="Assets/Resources/HeroShaderAnimated.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Gameplay/Hero/HeroStatus.cs" Line="242" Column="23" />
+      <File FileName="Assets/Scripts/Gameplay/Hero/AnimationActions.cs" Line="4" Column="30" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="65" Column="4" />
+      <File FileName="Assets/Scripts/UserControls.cs" Line="31" Column="1" />
+      <File FileName="Assets/Scripts/Gameplay/Hero/AnimationController.cs" Line="73" Column="40" />
+      <File FileName="Assets/Scripts/Gameplay/Hero/HeroControllerSword.cs" Line="153" Column="26" />
+      <File FileName="Assets/Scripts/Gameplay/Hero/HeroBaseController.cs" Line="32" Column="2" />
+      <File FileName="Assets/Scripts/InputBank.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Gameplay/Hero/HeroControllerNoSword.cs" Line="97" Column="7" />
+      <File FileName="Assets/Scripts/Audio/AudioBank.cs" Line="13" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
